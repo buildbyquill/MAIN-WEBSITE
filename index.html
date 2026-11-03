@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quill Labs — Digital Experiences</title>
+  <meta name="description" content="Quill Labs designs and builds digital experiences for growing businesses, including brand websites, landing pages, portfolios, redesigns, and custom website builds.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quill Labs — Digital Experiences">
+  <meta property="og:description" content="Quill Labs designs and builds digital experiences for growing businesses, including brand websites, landing pages, portfolios, redesigns, and custom website builds.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23722f37'/><path d='M28 72 L50 24 L72 72 L50 56 Z' fill='%23ffffff'/><circle cx='50' cy='38' r='6' fill='%23d8c9ae'/></svg>">
+
+  <!-- Fonts: Bricolage Grotesque (editorial display), DM Sans (body), JetBrains Mono (technical labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tailwind.css">
+
+  <!-- Unified Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top" class="site-canvas text-ink font-body antialiased selection:bg-brand selection:text-white">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ========================================================================= -->
+  <!-- 0. ACE ACADEMY SIGNATURE BOOT PRELOADER SCREEN                            -->
+  <!-- ========================================================================= -->
+  <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center p-4 bg-paper bg-dot-grid transition-all duration-500">
+    <div class="w-full max-w-sm bg-white border-[3px] border-ink rounded-2xl p-8 text-center shadow-brutal-lg">
+      
+      <!-- Shuffling Emblem -->
+      <div class="flex justify-center mb-5">
+        <div class="w-16 h-16 rounded-2xl bg-brand text-white flex items-center justify-center font-display font-black text-2xl border-[2.5px] border-ink shadow-brutal-sm animate-shuffle">
+          Q
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h3 class="font-display font-black text-2xl text-ink tracking-tight mb-2">
+        Quill Labs Studio
+      </h3>
+
+      <!-- Dynamic Real-Time Steps -->
+      <p id="preloader-status" class="font-mono text-xs text-ink-soft mb-6 h-5 transition-all">
+        Preparing your website experience...
+      </p>
+
+      <!-- Multi-Tone Quad-Color Spinner -->
+      <div class="flex justify-center mb-6">
+        <div class="dash-spinner"></div>
+      </div>
+
+      <!-- Quick Skip Trigger -->
+      <button onclick="dismissPreloader()" class="font-mono text-[11px] font-bold text-ink-muted hover:text-brand underline decoration-dotted uppercase tracking-wider">
+        [ Click or Press Any Key to Skip ]
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Click Burst Layer for AI Jugaad Word Pop -->
+  <div id="burst-layer" class="pointer-events-none fixed inset-0 z-[9999] overflow-hidden"></div>
+
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. DOTMIRROR FLOATING PILL NAVIGATION BAR & FULL-SIZED SERVICES MEGA MENU -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-5 inset-x-0 z-50 max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300" id="main-header">
+    <div id="header-shell" class="h-16 rounded-full bg-night/95 backdrop-blur-md border border-night-border px-5 sm:px-7 flex items-center justify-between shadow-pill-glow relative">
+      
+      <!-- Brand Logo Anchor -->
+      <a href="index.html" id="header-brand" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-brand text-white flex items-center justify-center font-display font-black text-xl border border-white/20 shadow-sm group-hover:scale-105 transition-all">
+          Q
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-black text-lg tracking-tight text-white flex items-center gap-1 leading-none">
+            QUILL LABS
+            <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+          </span>
+          <span class="text-[9px] font-mono uppercase tracking-widest text-zinc-400 mt-0.5">Digital Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav with Centered Full-Sized Offers Mega Menu -->
+      <nav class="hidden md:flex items-center gap-5 text-xs font-display font-bold tracking-wide text-zinc-300">
+        
+        <!-- OFFERS MEGA MENU TRIGGER & EXPANSIVE PANEL (Centered relative to the navbar capsule) -->
+        <div class="static group" id="nav-offers-item">
+          <button id="nav-offers-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full hover:text-white transition-all group-hover:bg-white/10 group-hover:text-white focus:outline-none cursor-pointer">
+            <span>Offers</span>
+            <svg class="w-3.5 h-3.5 text-zinc-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- FULL-SIZED EXPANSIVE MEGA PANEL (Centered horizontally at left-1/2 -translate-x-1/2 relative to the navbar capsule) -->
+          <div id="nav-offers-menu" class="absolute top-[calc(100%+10px)] left-1/2 w-[760px] max-w-[calc(100vw-32px)] bg-[#302D29]/95 backdrop-blur-2xl border border-white/10 rounded-3xl p-7 sm:p-8 shadow-2xl before:absolute before:-top-6 before:inset-x-0 before:h-8 text-left z-50">
+            <div class="grid grid-cols-6 gap-6">
+              
+              <!-- Column 1: 01 DIGITAL EXPERIENCES (Cyan/Sky Accent) -->
+              <div class="col-span-3 border-r border-white/10 pr-5 pillar-cyan">
+                <a href="digital-experiences.html" class="flex items-center justify-between mb-4 pb-2 border-b border-white/10 group/colhead">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-[#D9A0A6]">01</span>
+                    <span class="font-mono text-[10px] font-extrabold uppercase tracking-widest text-zinc-400 group-hover/colhead:text-white transition-colors">DIGITAL EXPERIENCES</span>
+                  </div>
+                  <span class="text-xs text-[#D9A0A6] group-hover/colhead:translate-x-1 transition-transform">→</span>
+                </a>
+                <div class="space-y-1">
+                  <a href="digital-experiences.html#brand-website" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#D9A0A6] transition-colors">Brand Website</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Position authority, explain value &amp; convert</p>
+                  </a>
+                  <a href="digital-experiences.html#landing-page" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#D9A0A6] transition-colors">Landing Page</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">High-impact single service or campaign offer</p>
+                  </a>
+                  <a href="digital-experiences.html#portfolio" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#D9A0A6] transition-colors">Portfolio Website</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Showcase work, client proof &amp; case studies</p>
+                  </a>
+                  <a href="digital-experiences.html#redesign" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#D9A0A6] transition-colors">Website Redesign</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Overhaul slow, outdated sites into modern engines</p>
+                  </a>
+                  <a href="digital-experiences.html#custom" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#D9A0A6] transition-colors">Custom Build</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Bespoke animations, custom layouts &amp; tailored logic</p>
+                  </a>
+                </div>
+                <div class="mt-4 pt-3 border-t border-white/5">
+                  <span class="inline-block text-[10px] font-mono text-zinc-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">
+                    3 Tiers: Essential · Motion · Immersive
+                  </span>
+                </div>
+              </div>
+
+              <!-- Column 4: Business Systems Coming Soon -->
+              <div class="col-span-3 pl-1">
+                <div class="h-full rounded-2xl bg-gradient-to-br from-[#302D29] via-[#302D29] to-[#252321] border border-white/10 p-5 relative overflow-hidden">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-mono text-[9px] font-extrabold uppercase tracking-wider text-yellow px-2 py-1 rounded bg-yellow/10 border border-yellow/20">COMING SOON</span>
+                    <span class="w-2 h-2 rounded-full bg-yellow/70"></span>
+                  </div>
+                  <h4 class="font-display font-black text-xl text-white tracking-tight mb-2">Business Systems</h4>
+                  <p class="text-[11px] text-zinc-400 leading-relaxed">We’re developing this service. It isn’t available to book yet.</p>
+                </div>
+              </div>
+
+            <!-- Bottom Status Footer Bar (Matching Screenshot) -->
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-400">
+                <strong class="text-white font-bold">Website services available now</strong> · Responsive design · clear enquiry paths · basic SEO
+              </span>
+              <div class="flex items-center gap-5">
+                <a href="offers.html" class="text-[#D9A0A6] hover:underline font-bold">Explore website options →</a>
+                <a href="contact.html" class="text-zinc-300 hover:text-white font-medium">Book a strategy call →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+        <a href="work.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Work</a>
+        <a href="process.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Process</a>
+        <a href="about.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">About</a>
+        </nav>
+
+      <!-- Right Action Cluster -->
+      <div class="flex items-center gap-3" id="header-actions">
+        <a href="contact.html" class="hidden sm:inline-block font-mono text-xs text-zinc-300 hover:text-white transition-colors py-2 px-2">
+          Contact ↗
+        </a>
+        <a href="contact.html" id="header-primary-cta" class="px-4 sm:px-5 py-2 rounded-full font-display text-[11px] sm:text-xs font-black text-white bg-brand border border-white/30 shadow-md hover:bg-brand-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer">
+          START A SPRINT →
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button onclick="toggleMobileNav()" id="mobile-nav-toggle" class="md:hidden w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white focus:outline-none cursor-pointer" aria-label="Toggle Navigation">
+          <svg id="menu-icon-open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          <svg id="menu-icon-close" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Drawer (Cleaned without Solutions) -->
+    <div id="mobile-nav-menu" class="hidden md:hidden mt-2 bg-night/95 backdrop-blur-xl border border-night-border rounded-2xl p-5 shadow-2xl space-y-4 text-sm font-display font-bold">
+      <div>
+        <a href="digital-experiences.html" class="text-[10px] font-mono text-brand-300 uppercase tracking-widest mb-2 block hover:underline">01. DIGITAL EXPERIENCES ↗</a>
+        <div class="grid grid-cols-2 gap-2 text-xs text-zinc-300">
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Brand Website</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Landing Page</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Portfolio Site</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Redesign</a>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-white/10 flex flex-col gap-2.5">
+        <a href="offers.html" onclick="toggleMobileNav()" class="text-white hover:text-brand-300">ALL OFFERS HUB</a>
+        <a href="work.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">SELECTED WORK</a>
+        <a href="process.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">PROCESS</a>
+        <a href="about.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">ABOUT STUDIO</a>
+        <a href="contact.html" onclick="toggleMobileNav()" class="text-yellow hover:underline font-mono text-xs">[ CONTACT / INTAKE → ]</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+
+  <!-- ========================================================================= -->
+  <!-- 3. HERO SECTION (Dark Blue Palette & DotMirror Atmospheric Glows)         -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-paper text-ink overflow-hidden pt-28 pb-14 sm:pt-32 sm:pb-16 border-b-2 border-night-border bg-dark-grid">
+    <div class="absolute inset-0 glow-bloom-night pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Tag Badge -->
+      <div class="flex justify-center mb-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md shadow-sm sticker-wobble">
+          <span class="w-2.5 h-2.5 rounded-full bg-mint animate-pulse"></span>
+          <span class="font-mono text-xs font-bold uppercase tracking-wider text-white">
+            WEBSITE DESIGN & DEVELOPMENT
+          </span>
+        </div>
+      </div>
+
+      <!-- Editorial display headline -->
+      <div class="text-center max-w-5xl mx-auto">
+        <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-[1.06] mb-4">
+          <span class="sr-only">We engineer websites that win trust.</span>
+          <span class="hero-headline-visual" aria-hidden="true">We engineer
+            <span id="hero-phrase-rotator" class="hero-phrase-rotator text-brand-300">
+              <span class="hero-phrase is-active">WEBSITES THAT WIN TRUST.</span>
+              <span class="hero-phrase">PAGES THAT MAKE ENQUIRING EASY.</span>
+              <span class="hero-phrase">PORTFOLIOS THAT SHOWCASE YOUR WORK.</span>
+              <span class="hero-phrase">REDESIGNS THAT FEEL LIKE YOU.</span>
+              <span class="hero-phrase">BUILDS SHAPED AROUND YOUR BRAND.</span>
+            </span>
+          </span>
+        </h1>
+        <p class="font-body text-base sm:text-lg text-zinc-300 max-w-3xl mx-auto font-normal leading-relaxed mb-5">
+          A clear, thoughtfully built website that earns trust, explains what you do, and makes it easy for the right visitors to get in touch.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+          <button onclick="openModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-display text-base font-black text-white bg-brand border border-white/30 shadow-pill-glow hover:-translate-y-1 transition-all active:translate-x-[2px] active:translate-y-[2px] cursor-pointer">
+            <span>START A SPRINT</span>
+            <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm font-mono">→</span>
+          </button>
+          
+          <a href="#scratch-section" class="hero-secondary-cta w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-display text-base font-bold text-white bg-white/10 border hover:bg-white/20 hover:-translate-y-0.5 transition-all">
+            <span>EXPLORE OUR OFFERS</span>
+            <span class="text-yellow font-mono">↓</span>
+          </a>
+        </div>
+
+        <p class="font-mono text-xs sm:text-sm text-zinc-300">
+          Clear scope and timeline before work begins <span class="text-zinc-500">·</span> 100% code &amp; IP handover
+        </p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. WEBSITE PROJECT FOUNDATIONS                                             -->
+  <!-- ========================================================================= -->
+  <section class="bg-[#302D29] border-b border-white/10 py-12 relative overflow-hidden bg-dark-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-white/10 pb-6">
+        <div>
+          <span class="font-mono text-xs uppercase font-extrabold tracking-widest text-[#D9A0A6] px-3 py-1 rounded-full bg-[#722F37]/15 border border-[#722F37]/30">CLEAR WEBSITE SCOPE</span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight mt-3">Built around the brief.</h2>
+        </div>
+        <div class="text-sm font-body text-zinc-300 max-w-md font-medium leading-relaxed">
+          Choose a website type and experience level, then shape the project with agreed pages and optional add-ons.
+        </div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-[#302D29] border border-white/10 rounded-2xl p-6"><div class="font-mono text-3xl sm:text-4xl font-black text-[#D9A0A6]">5</div><div class="font-display font-bold text-sm text-white mt-1.5">Website Types</div><div class="font-body text-xs text-zinc-400 mt-1">From brand sites to custom builds.</div></div>
+        <div class="bg-[#302D29] border border-white/10 rounded-2xl p-6"><div class="font-mono text-3xl sm:text-4xl font-black text-[#D9A0A6]">3</div><div class="font-display font-bold text-sm text-white mt-1.5">Experience Levels</div><div class="font-body text-xs text-zinc-400 mt-1">Essential, Motion, or Immersive.</div></div>
+        <div class="bg-[#302D29] border border-white/10 rounded-2xl p-6"><div class="font-mono text-3xl sm:text-4xl font-black text-[#D9A0A6]">SEO</div><div class="font-display font-bold text-sm text-white mt-1.5">Basic Foundation</div><div class="font-body text-xs text-zinc-400 mt-1">Included in the agreed website scope.</div></div>
+        <div class="bg-[#302D29] border border-white/10 rounded-2xl p-6"><div class="font-mono text-3xl sm:text-4xl font-black text-[#D9A0A6]">QA</div><div class="font-display font-bold text-sm text-white mt-1.5">Launch & Handover</div><div class="font-body text-xs text-zinc-400 mt-1">Support and handover as agreed.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. AI JUGAAD INTERACTIVE SCRATCH-ME SECTION OVER OUR OFFERS              -->
+  <!-- ========================================================================= -->
+  <section id="scratch-section" class="py-16 sm:py-24 bg-[#252321] border-b border-white/10 relative overflow-hidden bg-dark-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs uppercase font-extrabold text-[#D9A0A6] bg-[#722F37]/15 px-3 py-1 rounded-full border border-[#722F37]/30 mb-2">
+            <span>WEBSITE OFFER</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
+            What We Do
+          </h2>
+          <p class="font-body text-sm sm:text-base text-zinc-400 mt-1 max-w-xl">
+            Explore our website types, experience levels, and project foundations.
+          </p>
+        </div>
+
+        <!-- Live Scratch Status & Instant Skip Button -->
+        <div class="flex items-center gap-3">
+          <div id="scratch-progress-pill" class="font-mono text-xs font-bold px-3.5 py-1.5 rounded-full bg-[#302D29] text-white border border-white/15 shadow-sm flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-yellow animate-ping"></span>
+            <span id="scratch-pct-label">0% SCRATCHED · SWIPE TO UNLOCK</span>
+          </div>
+          <button id="scratch-reveal-btn" onclick="revealScratchCard()" class="font-mono text-xs font-bold text-white bg-brand hover:bg-brand-hover px-4 py-1.5 rounded-full border border-white/20 shadow-pill-glow hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer flex items-center gap-1.5">
+            <span>Reveal Instantly</span>
+            <span>↗</span>
+          </button>
+        </div>
+      </div>
+
+
+
+      <!-- Scratch Frame Container (Full-Grid Canvas Layer Covering All 3 Service Cards) -->
+      <div class="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-[#302D29]" id="scratch-wrapper">
+        
+        <!-- Interactive Scratch Canvas Overlay -->
+        <canvas id="scratch-canvas" class="absolute inset-0 w-full h-full touch-none select-none z-20 cursor-grab active:cursor-grabbing transition-opacity duration-700" aria-label="Scratch card - swipe to reveal our offers"></canvas>
+        
+        <!-- Underlying Real Cards (3 Columns matching AI Jugaad layout) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 sm:p-8 bg-[#302D29]">
+          
+          <!-- Card 01: Digital Experiences -->
+          <div class="flex flex-col justify-between rounded-2xl border border-white/10 p-6 sm:p-7 shadow-2xl bg-gradient-to-br from-[#302D29] to-[#302D29] hover:border-[#722F37]/40 hover:-translate-y-1.5 transition-all duration-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-display text-4xl font-black text-[#D9A0A6]">01</span>
+                <span class="font-mono text-xs font-extrabold uppercase px-2.5 py-1 rounded-full bg-[#722F37]/20 border border-[#722F37]/40 text-[#D9A0A6]">OFFER 01</span>
+              </div>
+              <h3 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-white mb-2">
+                DIGITAL EXPERIENCES
+              </h3>
+              <p class="font-body text-xs sm:text-sm font-medium text-zinc-300 leading-relaxed mb-5">
+                Authority-first websites that elevate brand value and convert traffic into qualified conversations.
+              </p>
+              <ul class="space-y-2 border-t border-white/10 pt-4 mb-6 font-display text-xs font-bold text-zinc-200">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#722F37]"></span>
+                  Brand Authority Websites
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#722F37]"></span>
+                  High-Converting Landing Pages
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#722F37]"></span>
+                  Portfolio Sites &amp; Full Redesigns
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#722F37]"></span>
+                  3 Levels: Essential · Motion · Immersive
+                </li>
+              </ul>
+            </div>
+            <a href="digital-experiences.html" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-[#722F37] text-white font-display font-bold text-xs hover:bg-[#BE1E17] shadow-pill-glow transition-all">
+              <span>EXPLORE DIGITAL EXPERIENCES</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Card 02: Business Systems Coming Soon -->
+          <div class="rounded-2xl border border-white/10 p-6 sm:p-7 bg-gradient-to-br from-[#302D29] to-[#302D29]">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-display text-4xl font-black text-[#D9A0A6]">02</span>
+              <span class="font-mono text-xs font-extrabold uppercase px-2.5 py-1 rounded-full bg-yellow/10 border border-yellow/20 text-yellow">COMING SOON</span>
+            </div>
+            <h3 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-white mb-2">BUSINESS SYSTEMS</h3>
+            <p class="font-body text-xs sm:text-sm text-zinc-300 leading-relaxed">We’re developing this service. It isn’t available to book yet.</p>
+          </div>
+
+          <!-- Card 03: The Quill Advantage / Built-in Standard -->
+          <div class="flex flex-col justify-between rounded-2xl border border-white/10 p-6 sm:p-7 shadow-2xl bg-gradient-to-br from-[#302D29] to-[#302D29] hover:border-[#722F37]/40 hover:-translate-y-1.5 transition-all duration-200 relative overflow-hidden">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-display text-4xl font-black text-[#D9A0A6]">03</span>
+                <span class="font-mono text-xs font-extrabold uppercase px-2.5 py-1 rounded-full bg-[#722F37]/15 border border-[#722F37]/30 text-[#D9A0A6] flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#722F37] animate-pulse"></span>
+                  UNFAIR ADVANTAGE
+                </span>
+              </div>
+              <h3 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-white mb-2">
+                WEBSITE FOUNDATIONS
+              </h3>
+              <p class="font-body text-xs sm:text-sm font-medium text-zinc-400 leading-relaxed mb-5">
+                Projects include responsive design, working navigation and calls to action, basic SEO, QA, and handover as agreed.
+              </p>
+              <ul class="space-y-2 border-t-2 border-white/10 pt-4 mb-6 font-display text-xs font-bold text-zinc-200">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow"></span>
+                  Agreed pages and responsive layouts
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow"></span>
+                  Working navigation and clear calls to action
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow"></span>
+                  Basic SEO foundation
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow"></span>
+                  Quality checks and agreed handover
+                </li>
+              </ul>
+            </div>
+            <a href="offers.html" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white text-ink font-display font-bold text-xs hover:bg-yellow transition-colors">
+              <span>EXPLORE WEBSITE OPTIONS</span>
+              <span>→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. OFFER 1: DIGITAL EXPERIENCES (Full PDF Integration)                    -->
+  <!-- ========================================================================= -->
+  <section id="digital-experiences" class="py-20 sm:py-28 bg-paper border-b-[2.5px] border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-14">
+        <div class="inline-flex items-center gap-2 font-mono text-xs uppercase font-extrabold text-brand bg-brand-soft px-3 py-1 rounded-full border border-brand/30 mb-3">
+          <span>OFFER 1 / DIGITAL EXPERIENCES</span>
+        </div>
+        <h2 class="font-display font-black text-4xl sm:text-5xl text-ink tracking-tight mb-4">
+          Websites that look credible and convert.
+        </h2>
+        <p class="font-body text-lg text-ink-soft leading-relaxed">
+          We build websites that help a business look credible online, explain its value, show its work, and make it easy for a customer to take the next step. Every project is shaped by three clear choices: <strong>Website Type</strong>, <strong>Experience Level</strong>, and <strong>Add-ons</strong>.
+        </p>
+      </div>
+
+      <!-- Inclusions Highlight Banner -->
+      <div class="bg-white border-2 border-ink rounded-2xl p-6 sm:p-8 shadow-brutal mb-12">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b-2 border-ink/10">
+          <div>
+            <span class="font-mono text-xs font-black uppercase text-mint-deep bg-mint-soft px-3 py-1 rounded-full border border-mint/30">
+              WEBSITE PROJECT FOUNDATIONS
+            </span>
+            <h3 class="font-display font-black text-2xl text-ink mt-2">
+              Responsive Design & Clear Enquiry Paths
+            </h3>
+          </div>
+          <div class="font-mono text-xs text-ink-soft max-w-sm">
+            Each project includes the agreed website scope and a clear enquiry pathway. WhatsApp capture is included where relevant.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6 text-xs font-mono text-ink">
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Responsive for all screen sizes</div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Agreed pages & sections</div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Working navigation & CTAs</div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Basic SEO foundation</div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Quality checks before launch</div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand"></span> Launch support and handover as agreed</div>
+        </div>
+        <p class="text-xs text-ink-soft mt-5">Automated replies, reminders, and follow-up workflows are not part of the standard website offer.</p>
+      </div>
+
+      <!-- The 5 Website Types Grid -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="font-display font-black text-2xl sm:text-3xl text-ink">
+            Step 1: Choose Your Website Type
+          </h3>
+          <span class="font-mono text-xs text-ink-soft">Classified by main purpose</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+
+          <div class="bg-white border-2 border-ink rounded-xl p-5 shadow-brutal-sm hover:-translate-y-1 transition-all flex flex-col justify-between card-enter">
+            <div>
+              <span class="font-mono text-[11px] font-black px-2 py-0.5 rounded bg-brand-soft text-brand border border-brand/20 uppercase">SUB-OFFER 01</span>
+              <h4 class="font-display font-black text-lg text-ink mt-3 mb-2">Brand Website</h4>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                A complete online presence that explains the whole business, builds credibility, presents services, and helps visitors get in touch.
+              </p>
+              <div class="text-[11px] font-mono text-ink-soft border-t border-zinc-100 pt-3">
+                <strong class="text-ink">Who it's for:</strong> Clinics, healthcare, consultants, restaurants, agencies, first proper site.
+              </div>
+            </div>
+            <button onclick="openModal('Brand Website')" class="mt-4 w-full py-2 rounded-lg bg-paper border border-ink text-xs font-display font-bold hover:bg-brand hover:text-white transition-colors cursor-pointer">
+              SELECT TYPE →
+            </button>
+          </div>
+
+          <div class="bg-white border-2 border-ink rounded-xl p-5 shadow-brutal-sm hover:-translate-y-1 transition-all flex flex-col justify-between card-enter">
+            <div>
+              <span class="font-mono text-[11px] font-black px-2 py-0.5 rounded bg-yellow text-ink border border-ink/20 uppercase">SUB-OFFER 02</span>
+              <h4 class="font-display font-black text-lg text-ink mt-3 mb-2">Landing Page</h4>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Guides visitors toward one primary action instead of presenting the whole business. Built for conversion velocity.
+              </p>
+              <div class="text-[11px] font-mono text-ink-soft border-t border-zinc-100 pt-3">
+                <strong class="text-ink">Who it's for:</strong> Promoting one specific service, consultants with a package, paid ad traffic.
+              </div>
+            </div>
+            <button onclick="openModal('Landing Page')" class="mt-4 w-full py-2 rounded-lg bg-paper border border-ink text-xs font-display font-bold hover:bg-brand hover:text-white transition-colors cursor-pointer">
+              SELECT TYPE →
+            </button>
+          </div>
+
+          <div class="bg-white border-2 border-ink rounded-xl p-5 shadow-brutal-sm hover:-translate-y-1 transition-all flex flex-col justify-between card-enter">
+            <div>
+              <span class="font-mono text-[11px] font-black px-2 py-0.5 rounded bg-paper-dark text-ink border border-ink/20 uppercase">SUB-OFFER 03</span>
+              <h4 class="font-display font-black text-lg text-ink mt-3 mb-2">Portfolio Website</h4>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Showcases capability through projects, case studies, and selected work. The work itself is the reason you get hired.
+              </p>
+              <div class="text-[11px] font-mono text-ink-soft border-t border-zinc-100 pt-3">
+                <strong class="text-ink">Who it's for:</strong> Designers, photographers, architects, creative studios, developers.
+              </div>
+            </div>
+            <button onclick="openModal('Portfolio Website')" class="mt-4 w-full py-2 rounded-lg bg-paper border border-ink text-xs font-display font-bold hover:bg-brand hover:text-white transition-colors cursor-pointer">
+              SELECT TYPE →
+            </button>
+          </div>
+
+          <div class="bg-white border-2 border-ink rounded-xl p-5 shadow-brutal-sm hover:-translate-y-1 transition-all flex flex-col justify-between card-enter">
+            <div>
+              <span class="font-mono text-[11px] font-black px-2 py-0.5 rounded bg-mint-soft text-mint-deep border border-mint/30 uppercase">SUB-OFFER 04</span>
+              <h4 class="font-display font-black text-lg text-ink mt-3 mb-2">Website Redesign</h4>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Improves an existing website's structure, design, mobile usability, speed, and technical positioning.
+              </p>
+              <div class="text-[11px] font-mono text-ink-soft border-t border-zinc-100 pt-3">
+                <strong class="text-ink">Who it's for:</strong> Brands with outdated sites, poor mobile performance, or weak conversions.
+              </div>
+            </div>
+            <button onclick="openModal('Website Redesign')" class="mt-4 w-full py-2 rounded-lg bg-paper border border-ink text-xs font-display font-bold hover:bg-brand hover:text-white transition-colors cursor-pointer">
+              SELECT TYPE →
+            </button>
+          </div>
+
+          <div class="bg-white border-2 border-ink rounded-xl p-5 shadow-brutal-sm hover:-translate-y-1 transition-all flex flex-col justify-between card-enter">
+            <div>
+              <span class="font-mono text-[11px] font-black px-2 py-0.5 rounded bg-coral-soft text-coral font-bold border border-coral/30 uppercase">SUB-OFFER 05</span>
+              <h4 class="font-display font-black text-lg text-ink mt-3 mb-2">Custom Build</h4>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                A bespoke website built around needs that standard types do not cover, such as complex interactive sequences or mixed types.
+              </p>
+              <div class="text-[11px] font-mono text-ink-soft border-t border-zinc-100 pt-3">
+                <strong class="text-ink">Who it's for:</strong> Distinctive briefs, multi-type platforms, bespoke launch experiences.
+              </div>
+            </div>
+            <button onclick="openModal('Custom Website Build')" class="mt-4 w-full py-2 rounded-lg bg-paper border border-ink text-xs font-display font-bold hover:bg-brand hover:text-white transition-colors cursor-pointer">
+              SELECT TYPE →
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Experience Levels -->
+      <div class="bg-white border-2 border-ink rounded-2xl p-6 sm:p-8 shadow-brutal">
+        <div class="mb-6">
+          <span class="font-mono text-xs uppercase font-extrabold text-brand bg-brand-soft px-3 py-1 rounded-full border border-brand/30">
+            STEP 2: CHOOSE YOUR EXPERIENCE LEVEL
+          </span>
+          <h3 class="font-display font-black text-2xl text-ink mt-2">
+            The Feel: How visitors interact with your website
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="p-6 rounded-xl border-2 border-ink bg-paper flex flex-col justify-between card-enter">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-display font-black text-lg text-ink">LEVEL 1: ESSENTIAL</span>
+                <span class="text-xl">⚡</span>
+              </div>
+              <p class="font-display font-bold text-xs text-brand mb-2">Clean, professional, straightforward</p>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Clean layouts and typography, responsive design, lightweight interactions, and clear calls to action, with readability at the center.
+              </p>
+              <div class="text-[11px] font-mono text-ink border-t border-zinc-200 pt-3">
+                <strong>Best suited for:</strong> Local businesses, clinics, consultants, clients who value clarity over heavy effects.
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl border-2 border-brand bg-brand-tint shadow-brutal-sm flex flex-col justify-between card-enter">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-display font-black text-lg text-brand">LEVEL 2: MOTION</span>
+                <span class="text-xl">✨</span>
+              </div>
+              <p class="font-display font-bold text-xs text-brand mb-2">Expressive and interactive</p>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Entrance animations, smooth transitions, hover physics, animated visual elements, custom interaction design that guides visitor attention.
+              </p>
+              <div class="text-[11px] font-mono text-ink border-t border-brand/20 pt-3">
+                <strong>Best suited for:</strong> Creative agencies, premium service businesses, studios wanting strong polish.
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl border-2 border-ink bg-paper flex flex-col justify-between card-enter">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-display font-black text-lg text-ink">LEVEL 3: IMMERSIVE</span>
+                <span class="text-xl">🎬</span>
+              </div>
+              <p class="font-display font-bold text-xs text-brand mb-2">Story-driven experience</p>
+              <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+                Scroll-triggered sequences, layered visuals, pinned or staged sections, advanced interactions where moving through the site is part of the story.
+              </p>
+              <div class="text-[11px] font-mono text-ink border-t border-zinc-200 pt-3">
+                <strong>Best suited for:</strong> High-end creative studios, distinctive product launches, visual storytelling.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. SELECTED WORK / PORTFOLIO WITH INTERACTIVE TAB FILTERS                -->
+  <!-- ========================================================================= -->
+  <section id="portfolio-section" class="py-20 sm:py-28 bg-paper border-b-[2.5px] border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="font-mono text-xs uppercase font-extrabold text-brand bg-brand-soft px-3 py-1 rounded-full border border-brand/30 mb-3 inline-block">
+            HANDPICKED PORTFOLIO
+          </span>
+          <h2 class="font-display font-black text-4xl sm:text-5xl text-ink tracking-tight">
+            Selected websites, built for real use.
+          </h2>
+        </div>
+        
+        <!-- Interactive Filter Tabs (AI Jugaad Style) -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterPortfolio('all', this)" class="port-tab px-4 py-2 rounded-full border-2 border-ink bg-brand text-white font-mono text-xs font-bold shadow-sm">
+            ALL WORK (3)
+          </button>
+          <button onclick="filterPortfolio('websites', this)" class="port-tab px-4 py-2 rounded-full border-2 border-ink bg-white text-ink font-mono text-xs font-bold hover:bg-zinc-100">
+            BRAND WEBSITES
+          </button>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+
+        <!-- Project 1: Destiny Laboratories -->
+        <div class="port-item websites bg-white border-2 border-ink rounded-2xl overflow-hidden shadow-brutal card-enter group">
+          <div class="relative h-60 bg-night overflow-hidden border-b-2 border-ink">
+            <img src="assets/projects/destiny-laboratories.webp" alt="Destiny Laboratories pharmaceutical website by Quill Labs" width="1024" height="571" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-brand text-white font-mono text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 shadow-sm">
+              VERIFIED CLIENT BUILD
+            </span>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-zinc-100 border border-ink/20">PHARMA & HEALTHCARE</span>
+              <span class="font-mono text-xs text-brand font-bold">Motion Website + WhatsApp</span>
+            </div>
+            <h3 class="font-display font-black text-2xl text-ink mb-2">Destiny Laboratories</h3>
+            <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+              Modern digital presence and an interactive pharmaceutical catalogue with a direct customer enquiry path.
+            </p>
+            <div class="grid grid-cols-3 gap-2 text-center border-t border-zinc-100 pt-4 font-mono">
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-brand text-base">Catalogue</div><div class="text-xs text-zinc-600">Product browsing</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-mint-deep text-base">WhatsApp</div><div class="text-xs text-zinc-600">Direct enquiry</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-ink text-base">Responsive</div><div class="text-xs text-zinc-600">Website layout</div></div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://destinylaboratories.com/" target="_blank" rel="noopener noreferrer" class="font-display font-bold text-ink hover:text-brand flex items-center gap-1">
+                <span>Visit Live Site</span> <span>↗</span>
+              </a>
+              <button onclick="openModal('Motion Website (Immersive & Motion)')" class="font-display font-black text-brand hover:underline cursor-pointer">BUILD SIMILAR →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: FrontierRaas -->
+        <div class="port-item websites bg-white border-2 border-ink rounded-2xl overflow-hidden shadow-brutal card-enter group">
+          <div class="relative h-60 bg-night overflow-hidden border-b-2 border-ink">
+            <img src="assets/projects/frontier-raas.webp" alt="FrontierRaas couture website by Quill Labs" width="1024" height="576" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-brand text-white font-mono text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 shadow-sm">
+              FEATURED CLIENT BUILD
+            </span>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-zinc-100 border border-ink/20">LUXURY & COUTURE</span>
+              <span class="font-mono text-xs text-brand font-bold">Editorial Motion Flagship</span>
+            </div>
+            <h3 class="font-display font-black text-2xl text-ink mb-2">FrontierRaas Couture</h3>
+            <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+              Exquisite Indian and Indo-Western fashion, customized for weddings and international clients with rich editorial visual storytelling.
+            </p>
+            <div class="grid grid-cols-3 gap-2 text-center border-t border-zinc-100 pt-4 font-mono">
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-brand text-base">Editorial</div><div class="text-xs text-zinc-600">Visual storytelling</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-mint-deep text-base">Motion</div><div class="text-xs text-zinc-600">Page interactions</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-ink text-base">Brand-led</div><div class="text-xs text-zinc-600">Product showcase</div></div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://frontier-raas.jaiozas544.workers.dev/" target="_blank" rel="noopener noreferrer" class="font-display font-bold text-ink hover:text-brand flex items-center gap-1">
+                <span>Visit Live Site</span> <span>↗</span>
+              </a>
+              <button onclick="openModal('Brand Website (Complete Online Presence)')" class="font-display font-black text-brand hover:underline cursor-pointer">BUILD SIMILAR →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Nukkar Dhaba -->
+        <div class="port-item websites bg-white border-2 border-ink rounded-2xl overflow-hidden shadow-brutal card-enter group">
+          <div class="relative h-60 bg-night overflow-hidden border-b-2 border-ink">
+            <img src="assets/projects/nukkar-dhaba.webp" alt="Nukkar Dhaba restaurant website by Quill Labs" width="1024" height="576" loading="lazy" decoding="async" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-brand text-white font-mono text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 shadow-sm">
+              LOCAL BUSINESS LAUNCH
+            </span>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-zinc-100 border border-ink/20">HOSPITALITY & DINING</span>
+              <span class="font-mono text-xs text-mint-deep font-bold">Menu & Table Ingestion</span>
+            </div>
+            <h3 class="font-display font-black text-2xl text-ink mb-2">Nukkar Dhaba</h3>
+            <p class="font-body text-xs text-ink-soft leading-relaxed mb-4">
+              A mobile-friendly menu that brings the restaurant online and gives visitors a direct WhatsApp enquiry path.
+            </p>
+            <div class="grid grid-cols-3 gap-2 text-center border-t border-zinc-100 pt-4 font-mono">
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-brand text-base">Menu</div><div class="text-xs text-zinc-600">Easy to browse</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-mint-deep text-base">WhatsApp</div><div class="text-xs text-zinc-600">Direct enquiry</div></div>
+              <div class="bg-paper p-2 rounded-lg border border-ink/10"><div class="font-black text-ink text-base">Mobile-first</div><div class="text-xs text-zinc-600">Website layout</div></div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-mono">
+              <a href="https://nukkar-dhaba.jaiozas544.workers.dev/" target="_blank" rel="noopener noreferrer" class="font-display font-bold text-ink hover:text-brand flex items-center gap-1">
+                <span>Visit Live Site</span> <span>↗</span>
+              </a>
+              <button onclick="openModal('Brand Website (Complete Online Presence)')" class="font-display font-black text-brand hover:underline cursor-pointer">BUILD SIMILAR →</button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 10. THE DELIVERY PROTOCOL                                                -->
+  <!-- ========================================================================= -->
+  <section class="py-20 sm:py-28 bg-paper border-b-[2.5px] border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="font-mono text-xs uppercase font-extrabold text-ink bg-white px-3 py-1 rounded-full border-2 border-ink shadow-brutal-sm mb-3 inline-block">
+          DELIVERY PROTOCOL
+        </span>
+        <h2 class="font-display font-black text-4xl sm:text-5xl text-ink tracking-tight mb-4">
+          A clear plan from scope to launch.
+        </h2>
+        <p class="font-body text-base sm:text-lg text-ink-soft">
+          Timelines depend on the agreed scope and experience level. We confirm the pages, milestones, and delivery plan before work begins.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-ink text-white font-mono font-black text-xl flex items-center justify-center mb-6 shadow-brutal-sm">01</div>
+            <div class="font-mono text-xs font-bold text-brand uppercase tracking-wider mb-1">PHASE 1</div>
+            <h3 class="font-display font-black text-2xl text-ink mb-3">Scope & Architecture</h3>
+            <p class="font-body text-sm text-ink-soft leading-relaxed">
+              We agree on the website's purpose, audience, content, pages, and experience level, then outline the project scope and milestones.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-zinc-100 font-mono text-xs text-ink font-semibold">
+            Deliverable: Agreed scope and website structure
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal-blue flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand text-white font-mono font-black text-xl flex items-center justify-center mb-6 shadow-brutal-sm">02</div>
+            <div class="font-mono text-xs font-bold text-brand uppercase tracking-wider mb-1">PHASE 2</div>
+            <h3 class="font-display font-black text-2xl text-ink mb-3">Design & Build</h3>
+            <p class="font-body text-sm text-ink-soft leading-relaxed">
+              We design and build the agreed pages, responsive layouts, navigation, calls to action, and interactions. Review points are set during project planning.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-zinc-100 font-mono text-xs text-brand font-semibold">
+            Deliverable: Website ready for review
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-mint-deep text-white font-mono font-black text-xl flex items-center justify-center mb-6 shadow-brutal-sm">03</div>
+            <div class="font-mono text-xs font-bold text-mint-deep uppercase tracking-wider mb-1">PHASE 3</div>
+            <h3 class="font-display font-black text-2xl text-ink mb-3">Quality Check & Launch</h3>
+            <p class="font-body text-sm text-ink-soft leading-relaxed">
+              We check the agreed pages, navigation, and enquiry pathways, then coordinate launch support and handover as agreed in the project scope.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-zinc-100 font-mono text-xs text-mint-deep font-semibold">
+            Deliverable: Quality-checked website and agreed handover
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. FAQ ACCORDION                                                         -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-paper border-b-[2.5px] border-ink">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="font-mono text-xs uppercase font-extrabold text-brand bg-brand-soft px-3 py-1 rounded-full border border-brand/30 mb-3 inline-block">
+          COMMON QUESTIONS
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-ink tracking-tight">
+          Questions asked before starting.
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-white border-2 border-ink rounded-xl overflow-hidden shadow-brutal-sm">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-display font-bold text-base text-ink flex justify-between items-center hover:bg-zinc-50 transition-colors cursor-pointer">
+            <span>How does Quill Labs differ from a traditional agency or freelancer?</span>
+            <span class="text-brand font-mono text-lg font-black ml-4">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 font-body text-sm text-ink-soft border-t border-zinc-100 leading-relaxed">
+            Each project begins with an agreed scope, timeline, and working plan. You stay in direct contact with the team, and the agreed code and intellectual property are handed over at completion.
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-ink rounded-xl overflow-hidden shadow-brutal-sm">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-display font-bold text-base text-ink flex justify-between items-center hover:bg-zinc-50 transition-colors cursor-pointer">
+            <span>What happens to our website after launch?</span>
+            <span class="text-brand font-mono text-lg font-black ml-4">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 font-body text-sm text-ink-soft border-t border-zinc-100 leading-relaxed">
+            Launch support and handover are agreed as part of your website project scope. Ongoing website maintenance is available through the Website Care Plan add-on.
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-ink rounded-xl overflow-hidden shadow-brutal-sm">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-display font-bold text-base text-ink flex justify-between items-center hover:bg-zinc-50 transition-colors cursor-pointer">
+            <span>What tech stack do you build on?</span>
+            <span class="text-brand font-mono text-lg font-black ml-4">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 font-body text-sm text-ink-soft border-t border-zinc-100 leading-relaxed">
+            The tools and approach depend on the website brief. We agree on the project scope and requirements before work begins.
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-ink rounded-xl overflow-hidden shadow-brutal-sm">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-display font-bold text-base text-ink flex justify-between items-center hover:bg-zinc-50 transition-colors cursor-pointer">
+            <span>What if we need ongoing maintenance or updates?</span>
+            <span class="text-brand font-mono text-lg font-black ml-4">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 font-body text-sm text-ink-soft border-t border-zinc-100 leading-relaxed">
+            Launch support and handover are agreed in the project scope. Ongoing website maintenance is available through the Website Care Plan add-on.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 13. HIGH-VOLTAGE OBSIDIAN & ELECTRIC BLUE FOOTER CTA                      -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="relative bg-night text-white py-24 sm:py-32 overflow-hidden border-b-2 border-night-border bg-dark-grid">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/20 border border-brand/50 text-brand-300 text-xs font-mono font-bold mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-mint animate-ping"></span>
+        WEBSITE DESIGN & DEVELOPMENT · READY TO START?
+      </div>
+
+      <h2 class="font-display font-black text-4xl sm:text-6xl text-white tracking-tight mb-6 leading-tight">
+        Need a website that earns trust and guides visitors? <br class="hidden sm:inline">
+        <span class="text-brand-300 underline decoration-yellow decoration-4">Let's build it on a clear timeline.</span>
+      </h2>
+
+      <p class="font-body text-base sm:text-lg text-zinc-400 max-w-xl mx-auto mb-10 leading-relaxed">
+        Tell us what your website needs to help visitors understand or do. We'll discuss the scope and next steps.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openModal()" class="w-full sm:w-auto px-10 py-5 rounded-full bg-brand text-white font-display font-black text-lg border-2 border-white shadow-pill-glow hover:-translate-y-1 hover:bg-brand-hover transition-all active:translate-x-[2px] active:translate-y-[2px] cursor-pointer">
+          START A SPRINT WITH US →
+        </button>
+        <a href="mailto:hello@quilllabs.io" class="w-full sm:w-auto px-8 py-5 rounded-full bg-white/10 text-white font-display font-bold text-base border-2 border-white/20 hover:bg-white/20 transition-all">
+          EMAIL: HELLO@QUILLLABS.IO
+        </a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-zinc-800 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-zinc-400">
+        <span>✓ Agreed project scope</span>
+        <span>✓ Responsive website design</span>
+        <span>✓ Enquiry pathway as agreed</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 14. FOOTER                                                               -->
+  <!-- ========================================================================= -->
+  </main>
+  <footer class="bg-zinc-950 text-zinc-400 py-12 border-t border-zinc-800 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-brand text-white font-display font-extrabold flex items-center justify-center text-sm border border-zinc-700">
+          Q
+        </div>
+        <span class="font-display font-bold text-sm text-white">QUILL LABS STUDIO</span>
+        <span class="text-zinc-600">·</span>
+        <span>© 2026 Quill Labs. Thoughtful digital experiences.</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="offers.html" class="hover:text-white transition-colors">All Offers</a>
+        <a href="digital-experiences.html" class="hover:text-white transition-colors">Digital Experiences</a>
+        <a href="work.html" class="hover:text-white transition-colors">Work</a>
+        <a href="process.html" class="hover:text-white transition-colors">Process</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="contact.html" class="text-brand-300 hover:text-white font-bold">Contact →</a>
+        <a href="#top" class="text-zinc-500 hover:text-white">Back to Top ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 15. INTERACTIVE SPRINT INTAKE MODAL                                       -->
+  <!-- ========================================================================= -->
+  <div id="project-modal" class="fixed inset-0 z-[90] hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative bg-white border-[2.5px] border-ink rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-brutal-lg transition-all">
+      
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full border-2 border-ink bg-paper flex items-center justify-center font-mono font-bold hover:bg-coral-soft cursor-pointer">
+        ✕
+      </button>
+
+      <div class="mb-6">
+        <div class="font-mono text-xs font-bold text-brand uppercase mb-1">QUILL LABS SPRINT INTAKE</div>
+        <h3 class="font-display font-black text-2xl text-ink">Let's plan your website.</h3>
+        <p class="text-xs text-ink-soft mt-1">Tell us briefly about what you want to engineer. We reply within 24 hours with a fixed-scope plan.</p>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Your Name & Business</label>
+          <input type="text" required placeholder="Alex Turner, Apex Dental Clinic" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand">
+        </div>
+
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Work Email or WhatsApp</label>
+          <input type="text" required placeholder="alex@clinic.com / +1 (555) 019-2831" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand">
+        </div>
+
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Which Website Project Do You Need?</label>
+          <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand bg-white">
+            <optgroup label="Website project">
+              <option>Brand Website (Complete Online Presence)</option>
+              <option>Landing Page (Promote One Service / Ad Traffic)</option>
+              <option>Portfolio Website (Showcase Work & Case Studies)</option>
+              <option>Website Redesign (Overhaul & Modernize)</option>
+              <option>Custom Website Build (Bespoke Scope)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Tell Us About Your Website Goal</label>
+          <textarea rows="3" placeholder="We need a clear website to explain our services and help visitors get in touch..." class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand text-white font-display font-black text-sm border-2 border-ink shadow-brutal hover:-translate-y-0.5 hover:shadow-brutal-lg transition-all cursor-pointer">
+          PREPARE EMAIL DRAFT →
+        </button>
+      </form>
+      
+      <div id="modal-success" class="hidden mt-4 p-4 rounded-xl bg-mint-soft border border-mint text-mint-deep text-xs font-mono text-center" role="status" aria-live="polite" tabindex="-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Main JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Homepage-Specific Scripts -->
+  <script>
+    // =========================================================================
+    // 3. ELEVATED AI JUGAAD HTML5 CANVAS SCRATCH CARD (Full-Grid + Shavings FX)
+    // =========================================================================
+    const canvas = document.getElementById("scratch-canvas");
+    let isDrawing = false;
+    let isRevealed = false;
+    let lastPoint = null;
+    let scratchCheckThrottle = 0;
+
+    function initScratchCanvas() {
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      ctx.scale(dpr, dpr);
+
+      // Deep Midnight Foil Base (#252321 to #302D29)
+      const grad = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+      grad.addColorStop(0, "#252321");
+      grad.addColorStop(0.5, "#302D29");
+      grad.addColorStop(1, "#252321");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, rect.width, rect.height);
+
+      // Metallic Diagonal Pin-Stripes
+      ctx.strokeStyle = "rgba(114, 47, 55, 0.08)";
+      ctx.lineWidth = 16;
+      for (let x = -rect.height; x < rect.width + rect.height; x += 36) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x + rect.height, rect.height);
+        ctx.stroke();
+      }
+
+      // High-Tech Circuit/Dot Grid Matrix
+      ctx.fillStyle = "rgba(242, 235, 221, 0.08)";
+      const dotStep = 24;
+      for (let x = 12; x < rect.width; x += dotStep) {
+        for (let y = 12; y < rect.height; y += dotStep) {
+          ctx.beginPath();
+          ctx.arc(x, y, 1.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Elegant Outer Dashed Bounding Frame
+      ctx.strokeStyle = "rgba(114, 47, 55, 0.24)";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([8, 6]);
+      ctx.strokeRect(16, 16, rect.width - 32, rect.height - 32);
+      ctx.setLineDash([]); // Reset dash
+
+      // Golden Center Badge & Callout
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const fontSize = Math.max(20, Math.min(rect.width * 0.045, 38));
+
+      // Coin Emblem
+      ctx.font = `${Math.max(28, fontSize * 1.3)}px sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("🪙", centerX, centerY - fontSize * 1.3);
+
+      // Main Scratch Prompt
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = `900 ${fontSize}px "Bricolage Grotesque", sans-serif`;
+      ctx.fillText("SCRATCH WITH CURSOR OR SWIPE", centerX, centerY - fontSize * 0.2);
+
+      // Subtitle
+      ctx.fillStyle = "#722F37";
+      ctx.font = `700 ${Math.max(11, fontSize * 0.4)}px "JetBrains Mono", monospace`;
+      ctx.fillText("CLEAR 35% TO EXPLORE WEBSITE OPTIONS", centerX, centerY + fontSize * 0.7);
+
+      // Corner Corner-Marks
+      ctx.fillStyle = "rgba(114, 47, 55, 0.7)";
+      ctx.font = `700 13px "JetBrains Mono", monospace`;
+      ctx.fillText("[ 01. WEBSITE ]", 70, 36);
+      ctx.fillText("[ 02. OPTIONS ]", rect.width - 70, 36);
+      ctx.fillText("[ PROJECT DELIVERY ]", centerX, rect.height - 32);
+ // Define scratchable area: a circle covering 50% of the larger dimension
+ canvas._scratchCenter = {
+   x: rect.width / 2,
+   y: rect.height / 2,
+   radius: Math.max(rect.width, rect.height) * 0.5
+ };
+    }
+
+    // Sparkle Particle Shavings System
+    function spawnFoilShavings(x, y) {
+      const burstContainer = document.getElementById("burst-layer");
+      if (!burstContainer) return;
+      const colors = ["#722F37", "#722F37", "#FFFFFF", "#722F37"];
+      for (let i = 0; i < 3; i++) {
+        const flake = document.createElement("div");
+        const size = Math.random() * 4 + 2;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const angle = Math.random() * Math.PI * 2;
+        const dist = Math.random() * 30 + 10;
+        const dx = Math.cos(angle) * dist;
+        const dy = Math.sin(angle) * dist + 15;
+
+        flake.style.position = "fixed";
+        flake.style.left = `${x}px`;
+        flake.style.top = `${y}px`;
+        flake.style.width = `${size}px`;
+        flake.style.height = `${size}px`;
+        flake.style.borderRadius = "2px";
+        flake.style.backgroundColor = color;
+        flake.style.pointerEvents = "none";
+        flake.style.zIndex = "9999";
+        flake.style.transition = "transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease";
+        flake.style.transform = "translate(0, 0) rotate(0deg)";
+
+        burstContainer.appendChild(flake);
+        requestAnimationFrame(() => {
+          flake.style.transform = `translate(${dx}px, ${dy}px) rotate(${Math.random() * 360}deg)`;
+          flake.style.opacity = "0";
+        });
+        setTimeout(() => flake.remove(), 450);
+      }
+    }
+
+    function scratchAt(x, y) {
+      if (isRevealed || !canvas) return;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const rect = canvas.getBoundingClientRect();
+      const currX = (x - rect.left) * dpr;
+      const currY = (y - rect.top) * dpr;
+
+      ctx.save();
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.lineWidth = 72 * dpr;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
+      if (lastPoint) {
+        ctx.beginPath();
+        ctx.moveTo(lastPoint.x, lastPoint.y);
+        ctx.lineTo(currX, currY);
+        ctx.stroke();
+      } else {
+        ctx.beginPath();
+        ctx.arc(currX, currY, 36 * dpr, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+
+      lastPoint = { x: currX, y: currY };
+      spawnFoilShavings(x, y);
+
+      // Throttle percentage check to maintain 60 FPS
+      const now = Date.now();
+      if (now - scratchCheckThrottle > 120) {
+        scratchCheckThrottle = now;
+        checkScratchPercentage(rect);
+      }
+    }
+
+    function checkScratchPercentage(rect) {
+      if (isRevealed || !canvas) return;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      
+      // Sample an 18x10 test grid across canvas
+      const cols = 18;
+      const rows = 10;
+      let clearHits = 0;
+      const totalSamples = cols * rows;
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const sampleX = Math.floor((c + 0.5) * (canvas.width / cols));
+          const sampleY = Math.floor((r + 0.5) * (canvas.height / rows));
+          const pixel = ctx.getImageData(sampleX, sampleY, 1, 1).data;
+          // If alpha is 0, pixel is cleared
+          if (pixel[3] < 30) {
+            clearHits++;
+          }
+        }
+      }
+
+      const pct = Math.round((clearHits / totalSamples) * 100);
+      const pctLabel = document.getElementById("scratch-pct-label");
+      if (pctLabel) {
+        if (pct < 10) {
+          pctLabel.textContent = `${pct}% SCRATCHED`;
+        } else if (pct < 35) {
+          pctLabel.textContent = `${pct}% UNLOCKED`;
+        }
+      }
+
+      if (pct >= 20) {
+        revealScratchCard();
+      }
+    }
+
+    function revealScratchCard() {
+      if (isRevealed) return;
+      isRevealed = true;
+      if (canvas) {
+        canvas.style.transform = "scale(1.02)";
+        canvas.style.opacity = "0";
+        canvas.style.pointerEvents = "none";
+      }
+      const btn = document.getElementById("scratch-reveal-btn");
+      if (btn) btn.style.display = "none";
+
+      const pctLabel = document.getElementById("scratch-pct-label");
+      if (pctLabel) {
+        pctLabel.textContent = "🎉 WEBSITE OFFER REVEALED";
+        pctLabel.parentElement.classList.remove("bg-night");
+        pctLabel.parentElement.classList.add("bg-[#722F37]", "text-white");
+      }
+
+      const perkBanner = document.getElementById("unlocked-perk-banner");
+      if (perkBanner) {
+        perkBanner.classList.remove("hidden");
+      }
+
+      // Celebratory Confetti Burst
+      if (typeof triggerConfetti === "function") {
+        triggerConfetti();
+      }
+    }
+
+    if (canvas) {
+      canvas.addEventListener("mousedown", (e) => { 
+        isDrawing = true; 
+        lastPoint = null; 
+        scratchAt(e.clientX, e.clientY); 
+      });
+      window.addEventListener("mousemove", (e) => { 
+        if (isDrawing) scratchAt(e.clientX, e.clientY); 
+      });
+      window.addEventListener("mouseup", () => { 
+        isDrawing = false; 
+        lastPoint = null; 
+      });
+
+      canvas.addEventListener("touchstart", (e) => { 
+        isDrawing = true; 
+        lastPoint = null; 
+        const t = e.touches[0]; 
+        scratchAt(t.clientX, t.clientY); 
+        e.preventDefault();
+      }, { passive: false });
+
+      canvas.addEventListener("touchmove", (e) => { 
+        if (isDrawing) { 
+          const t = e.touches[0]; 
+          scratchAt(t.clientX, t.clientY); 
+        } 
+        e.preventDefault();
+      }, { passive: false });
+
+      canvas.addEventListener("touchend", () => { 
+        isDrawing = false; 
+        lastPoint = null; 
+      });
+
+      window.addEventListener("resize", () => { if (!isRevealed) initScratchCanvas(); });
+      setTimeout(initScratchCanvas, 150);
+    }
+
+    // =========================================================================
+    // 4. PORTFOLIO FILTER TABS (AI Jugaad Style + ACE Academy Tab-In Pop)
+    // =========================================================================
+    function filterPortfolio(category, btn) {
+      document.querySelectorAll(".port-tab").forEach(b => {
+        b.className = "port-tab px-4 py-2 rounded-full border-2 border-ink bg-white text-ink font-mono text-xs font-bold hover:bg-zinc-100 cursor-pointer";
+        b.setAttribute("aria-pressed", "false");
+      });
+      btn.className = "port-tab px-4 py-2 rounded-full border-2 border-ink bg-brand text-white font-mono text-xs font-bold shadow-sm cursor-pointer";
+      btn.setAttribute("aria-pressed", "true");
+
+      const items = document.querySelectorAll(".port-item");
+      let visibleIdx = 0;
+      items.forEach(item => {
+        if (category === "all" || item.classList.contains(category)) {
+          item.style.display = "block";
+          item.classList.remove('in-view');
+          void item.offsetWidth; // Force reflow
+          setTimeout(() => {
+            item.classList.add('in-view');
+          }, visibleIdx * 90);
+          visibleIdx++;
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    // =========================================================================
+    // Estimator calculation logic
+    // =========================================================================
+    let baseDays = 12;
+    let baseHours = 45;
+
+    function setObjective(btn, name, days, hours) {
+      document.querySelectorAll('.obj-btn').forEach(b => {
+        b.className = 'obj-btn p-3 rounded-xl border-2 border-ink bg-white font-display font-bold text-xs text-ink text-center hover:bg-zinc-50 cursor-pointer';
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.className = 'obj-btn p-3 rounded-xl border-2 border-brand bg-brand-tint font-display font-bold text-xs text-brand text-center shadow-sm cursor-pointer';
+      btn.setAttribute('aria-pressed', 'true');
+
+      baseDays = days;
+      baseHours = hours;
+      updateEstimates(document.getElementById('team-range').value);
+    }
+
+    function updateEstimates(teamSize) {
+      document.getElementById('team-val').textContent = teamSize + (teamSize == 1 ? ' Person' : ' People');
+      const calculatedHours = Math.round(baseHours + (teamSize * 8.5));
+      document.getElementById('est-time').textContent = baseDays + ' Days';
+      document.getElementById('est-hours').textContent = calculatedHours + ' hrs/mo';
+    }
+  </script>
+
+</body>
+</html>

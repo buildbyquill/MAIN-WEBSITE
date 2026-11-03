@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Project Process — Quill Labs</title>
+  <meta name="description" content="See how Quill Labs scopes, designs, builds, tests, and launches website projects around an agreed brief and timeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Website Project Process — Quill Labs">
+  <meta property="og:description" content="See how Quill Labs scopes, designs, builds, tests, and launches website projects around an agreed brief and timeline.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23722f37'/><path d='M28 72 L50 24 L72 72 L50 56 Z' fill='%23ffffff'/><circle cx='50' cy='38' r='6' fill='%23d8c9ae'/></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tailwind.css">
+
+  <!-- Unified Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top" class="site-canvas text-ink font-body antialiased selection:bg-brand selection:text-white">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ========================================================================= -->
+  <!-- 0. ACE ACADEMY BOOT PRELOADER                                             -->
+  <!-- ========================================================================= -->
+  <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center p-4 bg-paper bg-dot-grid transition-all duration-500">
+    <div class="w-full max-w-sm bg-white border-[3px] border-ink rounded-2xl p-8 text-center shadow-brutal-lg">
+      <div class="flex justify-center mb-5">
+        <div class="w-16 h-16 rounded-2xl bg-brand text-white flex items-center justify-center font-display font-black text-2xl border-[2.5px] border-ink shadow-brutal-sm animate-shuffle">
+          Q
+        </div>
+      </div>
+      <h3 class="font-display font-black text-2xl text-ink tracking-tight mb-2">
+        Quill Labs Studio
+      </h3>
+      <p id="preloader-status" class="font-mono text-xs text-ink-soft mb-6 h-5 transition-all">
+        Loading delivery protocol...
+      </p>
+      <div class="flex justify-center mb-6">
+        <div class="dash-spinner"></div>
+      </div>
+      <button onclick="dismissPreloader()" class="font-mono text-[11px] font-bold text-ink-muted hover:text-brand underline decoration-dotted uppercase tracking-wider cursor-pointer">
+        [ Click or Press Any Key to Skip ]
+      </button>
+    </div>
+  </div>
+
+  <!-- Click Burst Layer -->
+  <div id="burst-layer" class="pointer-events-none fixed inset-0 z-[9999] overflow-hidden"></div>
+
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. DOTMIRROR FLOATING PILL NAVIGATION BAR & FULL-SIZED SERVICES MEGA MENU -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-5 inset-x-0 z-50 max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300" id="main-header">
+    <div id="header-shell" class="h-16 rounded-full bg-night/95 backdrop-blur-md border border-night-border px-5 sm:px-7 flex items-center justify-between shadow-pill-glow relative">
+      
+      <!-- Brand Logo Anchor -->
+      <a href="index.html" id="header-brand" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-brand text-white flex items-center justify-center font-display font-black text-xl border border-white/20 shadow-sm group-hover:scale-105 transition-all">
+          Q
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-black text-lg tracking-tight text-white flex items-center gap-1 leading-none">
+            QUILL LABS
+            <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+          </span>
+          <span class="text-[9px] font-mono uppercase tracking-widest text-zinc-400 mt-0.5">Digital Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav with Centered Full-Sized Offers Mega Menu -->
+      <nav class="hidden md:flex items-center gap-5 text-xs font-display font-bold tracking-wide text-zinc-300">
+        
+        <!-- OFFERS MEGA MENU TRIGGER & EXPANSIVE PANEL (Centered relative to the navbar capsule) -->
+        <div class="static group" id="nav-offers-item">
+          <button id="nav-offers-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full hover:text-white transition-all group-hover:bg-white/10 group-hover:text-white focus:outline-none cursor-pointer">
+            <span>Offers</span>
+            <svg class="w-3.5 h-3.5 text-zinc-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- FULL-SIZED EXPANSIVE MEGA PANEL (Centered horizontally at left-1/2 -translate-x-1/2 relative to the navbar capsule) -->
+          <div id="nav-offers-menu" class="absolute top-[calc(100%+10px)] left-1/2 w-[760px] max-w-[calc(100vw-32px)] bg-[#302D29]/95 backdrop-blur-2xl border border-white/10 rounded-3xl p-7 sm:p-8 shadow-2xl before:absolute before:-top-6 before:inset-x-0 before:h-8 text-left z-50">
+            <div class="grid grid-cols-6 gap-6">
+              
+              <!-- Column 1: 01 DIGITAL EXPERIENCES (Cyan/Sky Accent) -->
+              <div class="col-span-3 border-r border-white/10 pr-5 pillar-cyan">
+                <a href="digital-experiences.html" class="flex items-center justify-between mb-4 pb-2 border-b border-white/10 group/colhead">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-[#722F37]">01</span>
+                    <span class="font-mono text-[10px] font-extrabold uppercase tracking-widest text-zinc-400 group-hover/colhead:text-white transition-colors">DIGITAL EXPERIENCES</span>
+                  </div>
+                  <span class="text-xs text-[#722F37] group-hover/colhead:translate-x-1 transition-transform">→</span>
+                </a>
+                <div class="space-y-1">
+                  <a href="digital-experiences.html#brand-website" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#722F37] transition-colors">Brand Website</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Position authority, explain value &amp; convert</p>
+                  </a>
+                  <a href="digital-experiences.html#landing-page" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#722F37] transition-colors">Landing Page</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">High-impact single service or campaign offer</p>
+                  </a>
+                  <a href="digital-experiences.html#portfolio" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#722F37] transition-colors">Portfolio Website</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Showcase work, client proof &amp; case studies</p>
+                  </a>
+                  <a href="digital-experiences.html#redesign" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#722F37] transition-colors">Website Redesign</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Overhaul slow, outdated sites into modern engines</p>
+                  </a>
+                  <a href="digital-experiences.html#custom" class="nav-mega-link block p-2 pl-3.5 rounded-xl hover:bg-white/5 transition-colors">
+                    <div class="font-display font-bold text-[13px] text-zinc-100 hover:text-[#722F37] transition-colors">Custom Build</div>
+                    <p class="text-[11px] text-zinc-400 leading-snug mt-0.5 line-clamp-1">Bespoke animations, custom layouts &amp; tailored logic</p>
+                  </a>
+                </div>
+                <div class="mt-4 pt-3 border-t border-white/5">
+                  <span class="inline-block text-[10px] font-mono text-zinc-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">
+                    3 Tiers: Essential · Motion · Immersive
+                  </span>
+                </div>
+              </div>
+
+              <!-- Column 4: Business Systems Coming Soon -->
+              <div class="col-span-3 pl-1">
+                <div class="h-full rounded-2xl bg-gradient-to-br from-[#302D29] via-[#302D29] to-[#252321] border border-white/10 p-5 relative overflow-hidden">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-mono text-[9px] font-extrabold uppercase tracking-wider text-yellow px-2 py-1 rounded bg-yellow/10 border border-yellow/20">COMING SOON</span>
+                    <span class="w-2 h-2 rounded-full bg-yellow/70"></span>
+                  </div>
+                  <h4 class="font-display font-black text-xl text-white tracking-tight mb-2">Business Systems</h4>
+                  <p class="text-[11px] text-zinc-400 leading-relaxed">We’re developing this service. It isn’t available to book yet.</p>
+                </div>
+              </div>
+
+            <!-- Bottom Status Footer Bar (Matching Screenshot) -->
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-400">
+                <strong class="text-white font-bold">Website services available now</strong> · Responsive design · clear enquiry paths · basic SEO
+              </span>
+              <div class="flex items-center gap-5">
+                <a href="offers.html" class="text-[#722F37] hover:underline font-bold">Explore website options →</a>
+                <a href="contact.html" class="text-zinc-300 hover:text-white font-medium">Book a strategy call →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+        <a href="work.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Work</a>
+        <a href="process.html" class="px-3.5 py-1.5 rounded-full text-white bg-white/10 font-bold transition-all">Process</a>
+        <a href="about.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">About</a>
+        </nav>
+
+      <!-- Right Action Cluster -->
+      <div class="flex items-center gap-3" id="header-actions">
+        <a href="contact.html" class="hidden sm:inline-block font-mono text-xs text-zinc-300 hover:text-white transition-colors py-2 px-2">
+          Contact ↗
+        </a>
+        <a href="contact.html" id="header-primary-cta" class="px-4 sm:px-5 py-2 rounded-full font-display text-[11px] sm:text-xs font-black text-white bg-brand border border-white/30 shadow-md hover:bg-brand-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer">
+          START A SPRINT →
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button onclick="toggleMobileNav()" id="mobile-nav-toggle" class="md:hidden w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white focus:outline-none cursor-pointer" aria-label="Toggle Navigation">
+          <svg id="menu-icon-open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          <svg id="menu-icon-close" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Drawer (Cleaned without Solutions) -->
+    <div id="mobile-nav-menu" class="hidden md:hidden mt-2 bg-night/95 backdrop-blur-xl border border-night-border rounded-2xl p-5 shadow-2xl space-y-4 text-sm font-display font-bold">
+      <div>
+        <a href="digital-experiences.html" class="text-[10px] font-mono text-brand-300 uppercase tracking-widest mb-2 block hover:underline">01. DIGITAL EXPERIENCES ↗</a>
+        <div class="grid grid-cols-2 gap-2 text-xs text-zinc-300">
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Brand Website</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Landing Page</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Portfolio Site</a>
+          <a href="digital-experiences.html" onclick="toggleMobileNav()" class="p-2 rounded-lg bg-white/5 hover:text-white">Redesign</a>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-white/10 flex flex-col gap-2.5">
+        <a href="offers.html" onclick="toggleMobileNav()" class="text-white hover:text-brand-300">ALL OFFERS HUB</a>
+        <a href="work.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">SELECTED WORK</a>
+        <a href="process.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">PROCESS</a>
+        <a href="about.html" onclick="toggleMobileNav()" class="text-zinc-300 hover:text-white">ABOUT STUDIO</a>
+        <a href="contact.html" onclick="toggleMobileNav()" class="text-yellow hover:underline font-mono text-xs">[ CONTACT / INTAKE → ]</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+
+  <!-- Hero Header -->
+  <section class="bg-paper text-ink pt-36 pb-20 sm:pt-44 sm:pb-24 border-b-2 border-night-border bg-dark-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 font-mono text-xs uppercase font-extrabold text-brand-300 bg-brand/20 px-3.5 py-1.5 rounded-full border border-brand/40 mb-4">
+          OPERATIONAL CADENCE
+        </div>
+        <h1 class="font-display font-black text-4xl sm:text-6xl text-white tracking-tight mb-6">
+          No hourly billing. <br>
+          <span class="text-brand-300 underline decoration-yellow decoration-4">Delivery on a clear timeline.</span>
+        </h1>
+        <p class="font-body text-lg sm:text-xl text-zinc-300 leading-relaxed">
+          Timelines depend on the agreed scope and experience level. We confirm the pages, milestones, and delivery plan before work begins.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 3 Phases -->
+  <section class="py-20 bg-paper border-b-2 border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Phase 1 -->
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-ink text-white font-mono font-black text-2xl flex items-center justify-center mb-6 shadow-brutal-sm">
+              01
+            </div>
+            <span class="font-mono text-xs font-bold text-brand uppercase tracking-wider">PHASE 1</span>
+            <h2 class="font-display font-black text-2xl text-ink mt-1 mb-3">
+              Scope & Architecture
+            </h2>
+            <p class="font-body text-sm text-ink-soft leading-relaxed mb-6">
+              We agree on the website's purpose, audience, content, pages, and experience level, then outline the project scope and milestones.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-100 font-mono text-xs text-ink">
+            <strong>Milestone Output:</strong> Agreed scope and website structure
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand text-white font-mono font-black text-2xl flex items-center justify-center mb-6 shadow-brutal-sm">
+              02
+            </div>
+            <span class="font-mono text-xs font-bold text-brand uppercase tracking-wider">PHASE 2</span>
+            <h2 class="font-display font-black text-2xl text-ink mt-1 mb-3">
+              Build & Wire
+            </h2>
+            <p class="font-body text-sm text-ink-soft leading-relaxed mb-6">
+              We design and build the agreed pages, responsive layouts, navigation, calls to action, and interactions. Review points are set during project planning.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-100 font-mono text-xs text-brand">
+            <strong>Milestone Output:</strong> Website ready for review
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-white border-2 border-ink rounded-2xl p-8 shadow-brutal flex flex-col justify-between card-enter">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-mint-deep text-white font-mono font-black text-2xl flex items-center justify-center mb-6 shadow-brutal-sm">
+              03
+            </div>
+            <span class="font-mono text-xs font-bold text-mint-deep uppercase tracking-wider">PHASE 3</span>
+            <h2 class="font-display font-black text-2xl text-ink mt-1 mb-3">
+              Stress-Test & Launch
+            </h2>
+            <p class="font-body text-sm text-ink-soft leading-relaxed mb-6">
+              We check the agreed pages, navigation, and enquiry pathways, then coordinate launch support and handover as agreed in the project scope.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-zinc-100 font-mono text-xs text-mint-deep">
+            <strong>Milestone Output:</strong> Quality-checked website and agreed handover
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client Commitments Comparison -->
+  <section class="py-20 bg-paper-alt border-b-2 border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-ink tracking-tight mb-2">
+          How Quill Labs Compares
+        </h2>
+        <p class="text-sm font-body text-ink-soft">
+          A clear, collaborative process helps keep website projects focused.
+        </p>
+      </div>
+
+      <div class="bg-white border-2 border-ink rounded-2xl overflow-hidden shadow-brutal card-enter">
+        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x-2 divide-ink">
+          
+          <div class="p-8 bg-paper">
+            <span class="font-mono text-xs font-bold text-ink-soft uppercase block mb-2">Traditional Agency</span>
+            <div class="font-display font-bold text-xl text-ink mb-4">Slow & Opaque</div>
+            <ul class="text-xs font-mono space-y-3 text-ink-soft">
+              <li>✕ 8–16 week timelines with padding</li>
+              <li>✕ Hourly billing incentivizing slow work</li>
+              <li>✕ Junior handoffs and account manager telephone</li>
+              <li>✕ Monthly software hostage fees</li>
+            </ul>
+          </div>
+
+          <div class="p-8 bg-paper">
+            <span class="font-mono text-xs font-bold text-ink-soft uppercase block mb-2">Solo Freelancers</span>
+            <div class="font-display font-bold text-xl text-ink mb-4">Fragile & Inconsistent</div>
+            <ul class="text-xs font-mono space-y-3 text-ink-soft">
+              <li>✕ Great at design OR code, rarely both</li>
+              <li>✕ Often disappear mid-sprint for new gigs</li>
+              <li>✕ Zero documentation or project handover</li>
+              <li>✕ Single point of failure for your business</li>
+            </ul>
+          </div>
+
+          <div class="p-8 bg-brand-tint border-2 border-brand">
+            <span class="font-mono text-xs font-bold text-brand uppercase block mb-2">Quill Labs Studio</span>
+            <div class="font-display font-black text-xl text-brand mb-4">Fixed-Scope Engineering Sprint</div>
+            <ul class="text-xs font-mono space-y-3 text-ink font-semibold">
+              <li>✓ Delivery timeline matched to the agreed scope</li>
+              <li>✓ Fixed price upfront with zero hidden scope charges</li>
+              <li>✓ Direct Slack/WhatsApp channel with senior engineers</li>
+              <li>✓ 100% private GitHub repository & code ownership</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-night text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-display font-black text-3xl sm:text-5xl mb-6">
+        Ready to start your project?
+      </h2>
+      <p class="text-zinc-400 text-base mb-8 max-w-xl mx-auto">
+        We review your requirements, document the scope, and agree on a delivery window that fits the work.
+      </p>
+      <button onclick="openModal()" class="px-8 py-4 rounded-full bg-brand text-white font-display font-black text-sm hover:bg-brand-hover transition-all cursor-pointer">
+        BOOK YOUR SPRINT SLOT →
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  </main>
+  <footer class="bg-zinc-950 text-zinc-400 py-12 border-t border-zinc-800 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-brand text-white font-display font-extrabold flex items-center justify-center text-sm border border-zinc-700">
+          Q
+        </div>
+        <span class="font-display font-bold text-sm text-white">QUILL LABS STUDIO</span>
+        <span class="text-zinc-600">·</span>
+        <span>© 2026 Quill Labs. Thoughtful digital experiences.</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="offers.html" class="hover:text-white transition-colors">All Offers</a>
+        <a href="digital-experiences.html" class="hover:text-white transition-colors">Digital Experiences</a>
+        <a href="work.html" class="hover:text-white transition-colors">Work</a>
+        <a href="process.html" class="text-brand-300 hover:text-white font-bold">Process</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="contact.html" class="text-yellow hover:underline">Contact →</a>
+        <a href="#top" class="text-zinc-500 hover:text-white">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="project-modal" class="fixed inset-0 z-[90] hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative bg-white border-[2.5px] border-ink rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-brutal-lg transition-all">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full border-2 border-ink bg-paper flex items-center justify-center font-mono font-bold hover:bg-coral-soft cursor-pointer">✕</button>
+      <div class="mb-6">
+        <div class="font-mono text-xs font-bold text-brand uppercase mb-1">QUILL LABS SPRINT INTAKE</div>
+        <h3 class="font-display font-black text-2xl text-ink">Let's plan your website.</h3>
+        <p class="text-xs text-ink-soft mt-1">Tell us briefly about what you want to engineer. We reply within 24 hours with a fixed-scope plan.</p>
+      </div>
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Your Name & Business</label>
+          <input type="text" required placeholder="Alex Turner, Apex Dental Clinic" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand">
+        </div>
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Work Email or WhatsApp</label>
+          <input type="text" required placeholder="alex@clinic.com / +1 (555) 019-2831" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand">
+        </div>
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Which Website Project Do You Need?</label>
+          <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand bg-white">
+            <optgroup label="Website project">
+              <option>Brand Website (Complete Online Presence)</option>
+              <option>Landing Page (Promote One Service / Ad Traffic)</option>
+              <option>Portfolio Website (Showcase Work & Case Studies)</option>
+              <option>Website Redesign (Overhaul & Modernize)</option>
+              <option>Custom Website Build (Bespoke Scope)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label class="block font-display font-bold text-xs text-ink mb-1">Tell Us About Your Website Goal</label>
+          <textarea rows="3" placeholder="Tell us about the project scope or required turnaround date..." class="w-full px-3.5 py-2.5 rounded-xl border-2 border-ink text-sm font-body focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand text-white font-display font-black text-sm border-2 border-ink shadow-brutal hover:-translate-y-0.5 hover:shadow-brutal-lg transition-all cursor-pointer">
+          PREPARE EMAIL DRAFT →
+        </button>
+      </form>
+      <div id="modal-success" class="hidden mt-4 p-4 rounded-xl bg-mint-soft border border-mint text-mint-deep text-xs font-mono text-center" role="status" aria-live="polite" tabindex="-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
