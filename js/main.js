@@ -38,6 +38,78 @@
   });
 })();
 
+// --- 1.5. Persistent brand design switcher ---
+const DESIGN_THEME_STORAGE_KEY = 'quill-labs-design-theme';
+
+function applyDesignTheme(theme, persist = true) {
+  const activeTheme = theme === 'crimson' ? 'crimson' : 'gold';
+  document.documentElement.dataset.theme = activeTheme;
+  const nextTheme = activeTheme === 'crimson' ? 'golden' : 'crimson';
+
+  document.querySelectorAll('[data-design-switch]').forEach((button) => {
+    button.setAttribute('aria-label', `Switch to the ${nextTheme} design`);
+    button.title = `Switch to the ${nextTheme} design`;
+    const label = button.querySelector('.design-switch-label');
+    if (label) label.textContent = `Switch to the ${nextTheme} design`;
+  });
+
+  if (persist) {
+    try {
+      window.localStorage.setItem(DESIGN_THEME_STORAGE_KEY, activeTheme);
+    } catch (error) {
+      console.warn('Unable to save the design preference for the next page.', error);
+    }
+  }
+}
+
+function createDesignSwitch(mobile = false) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = mobile ? 'design-switch design-switch-mobile' : 'design-switch';
+  button.setAttribute('data-design-switch', '');
+
+  ['gold', 'crimson'].forEach((theme) => {
+    const swatch = document.createElement('span');
+    swatch.className = `design-switch-swatch design-switch-swatch-${theme}`;
+    swatch.setAttribute('aria-hidden', 'true');
+    button.append(swatch);
+  });
+
+  if (mobile) {
+    const label = document.createElement('span');
+    label.className = 'design-switch-label';
+    button.append(label);
+  }
+
+  button.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'crimson' ? 'gold' : 'crimson';
+    applyDesignTheme(nextTheme);
+  });
+  return button;
+}
+
+function initDesignSwitcher() {
+  let savedTheme = 'gold';
+  try {
+    savedTheme = window.localStorage.getItem(DESIGN_THEME_STORAGE_KEY) === 'crimson' ? 'crimson' : 'gold';
+  } catch (error) {
+    console.warn('Unable to read the saved design preference; using the golden design.', error);
+  }
+  applyDesignTheme(savedTheme, false);
+
+  const actions = document.getElementById('header-actions');
+  const primaryCta = document.getElementById('header-primary-cta');
+  if (actions && primaryCta && !actions.querySelector('[data-design-switch]')) {
+    actions.insertBefore(createDesignSwitch(), primaryCta);
+  }
+
+  const mobileMenu = document.getElementById('mobile-nav-menu');
+  if (mobileMenu && !mobileMenu.querySelector('[data-design-switch]')) {
+    mobileMenu.append(createDesignSwitch(true));
+  }
+  applyDesignTheme(savedTheme, false);
+}
+
 // --- 2. ACE Academy Tactile Card Pop Entrance with Staggered Delays ---
 function initCardEntrance() {
   const cards = document.querySelectorAll('.card-enter');
@@ -540,6 +612,7 @@ function initControlStates() {
 }
 
 function initInteractions() {
+  initDesignSwitcher();
   initHeroPhraseRotation();
   initMobileNav();
   initModal();

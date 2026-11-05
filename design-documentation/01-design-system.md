@@ -5,42 +5,43 @@
 ### Core Brand Colors
 | Color Name | HEX | Usage |
 |------------|-----|-------|
-| Obsidian Black | `#080808` | Main canvas, hero, navigation and footer |
-| Chrome Silver | `#CDCBCA` | Secondary text, borders and supporting UI |
-| Laser Crimson | `#D41514` | Primary CTA and selective highlights |
-| Pure White | `#F3F0F3` | Primary text and high-contrast UI |
-| Graphite | `#171516` | Cards, forms and secondary surfaces |
-| Gunmetal | `#352E30` | Raised surfaces and subtle contrast |
-| Deep Crimson | `#810E11` | Crimson depth and restrained button gradients |
-| Muted Grey | `#8A7A7A` | Quiet supporting labels |
+| Midnight Black | `#08090B` | Golden theme canvas, hero, navigation and footer |
+| Pure White | `#F5F3EF` | Golden theme primary text and high-contrast UI |
+| Golden Yellow | `#FFC900` | Default primary CTA, selective highlights and graphic accents |
+| Graphite | `#111317` | Golden theme cards, forms and secondary surfaces |
+| Dark Border | `#292B30` | Golden theme raised surfaces and subtle contrast |
+| Muted Text | `#A5A5A5` | Golden theme supporting copy, captions and metadata |
+
+### Alternate Crimson Theme
+The navigation design switch also enables the previous crimson identity. It uses Obsidian Black `#080808`, Soft White `#F3F0F3`, Laser Crimson `#D41514`, Graphite `#140E11`, Gunmetal `#352E30`, and Muted Grey `#8A7A7A`. The selected theme is stored in local storage and shared across pages.
 
 ### Background and Surface Colors
 | Color Name | HEX | Usage |
 |------------|-----|-------|
-| Obsidian Surface | `#080808` | Page canvas, hero and footer |
-| Graphite Surface | `#171516` | Cards, forms and alternating sections |
-| Gunmetal Surface | `#352E30` | Raised cards and supporting surfaces |
-| Crimson Tint | `rgba(212, 21, 20, 0.12)` | Restrained accent surface |
+| Midnight Surface | `#08090B` | Page canvas, hero and footer |
+| Graphite Surface | `#111317` | Cards, forms and alternating sections |
+| Dark Border Surface | `#292B30` | Raised cards and subtle separators |
+| Gold Tint | `rgba(255, 201, 0, 0.09)` | Restrained accent surface |
 
 ### Text Colors
 | Color Name | HEX | RGB | Usage | Purpose | Category |
 |------------|-----|-----|-------|---------|----------|
-| Text (Pure White) | `#F3F0F3` | 243, 240, 243 | Primary text on dark surfaces | Text | `#F3F0F3` |
-| Text (Chrome) | `#CDCBCA` | 205, 203, 202 | Supporting copy and UI labels | Text | `#CDCBCA` |
-| Text (Muted Grey) | `#8A7A7A` | 138, 122, 122 | Quiet captions and metadata | Text | `#8A7A7A` |
+| Text (Pure White) | `#F5F3EF` | 245, 243, 239 | Primary text on dark surfaces | Text | `#F5F3EF` |
+| Text (Muted) | `#A5A5A5` | 165, 165, 165 | Supporting copy and UI labels | Text | `#A5A5A5` |
+| Text (Muted Grey) | `#A5A5A5` | 165, 165, 165 | Quiet captions and metadata | Text | `#A5A5A5` |
 
 ### Borders and Dividers
 | Color Name | HEX | RGB | Usage | Purpose | Category |
 |------------|-----|-----|-------|---------|----------|
-| Border Subtle | `rgba(205, 203, 202, 0.16)` | Chrome Silver | Dark-surface separators | Border | `rgba(205, 203, 202, 0.16)` |
-| Border Hover | `rgba(212, 21, 20, 0.56)` | Laser Crimson | Interactive hover states | Border | `rgba(212, 21, 20, 0.56)` |
+| Border Subtle | `rgba(245, 243, 239, 0.16)` | Pure White | Dark-surface separators | Border | `rgba(245, 243, 239, 0.16)` |
+| Border Hover | `rgba(255, 201, 0, 0.56)` | Golden Yellow | Interactive hover states | Border | `rgba(255, 201, 0, 0.56)` |
 
 ### Gradients and Patterns
 | Name | Description | Colors | Usage |
 |------|-------------|--------|-------|
-| Dot Grid Pattern | Subtle radial dot grid | Low-opacity chrome or crimson | Background texture on selected sections |
-| Glow Bloom | Restrained radial tint | Laser Crimson | Decorative emphasis |
-| Graphite Bloom | Restrained radial tint | Gunmetal over obsidian | Dark-section atmosphere |
+| Dot Grid Pattern | Subtle radial dot grid | Low-opacity white or gold | Background texture on selected sections |
+| Gold Geometry | Cropped circles and fine rules | Golden Yellow | Hero and selected portfolio accents |
+| Graphite Surface | Subtle tonal contrast | Graphite over midnight | Dark-section atmosphere |
 
 ## Typography
 
@@ -96,16 +97,16 @@
 ### Shadows
 - **Default**: box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) 
 - **Card**: box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)
-- **Button**: restrained scarlet shadow with ivory text
+- **Button**: compact accent surface with theme-appropriate foreground text
 
 ## Visual Effects
 
 ### Background Patterns
-- **Dot Grid**: subtle crimson radial dots with 28px repeat
-- **Dark Grid**: subtle chrome radial dots with 28px repeat
+- **Dot Grid**: subtle neutral radial dots with 28px repeat
+- **Dark Grid**: subtle neutral radial dots with 28px repeat
 
 ### Glow Effects
-- **Basic Glow**: restrained laser-crimson radial tint
+- **Basic Glow**: restrained golden-yellow radial tint
 - **Dark Glow**: restrained gunmetal radial tint over obsidian
 
 ### Shadows
@@ -113,7 +114,7 @@
   - Small: 0 4px 14px rgba(0, 0, 0, 0.28)
   - Standard: 0 8px 24px rgba(0, 0, 0, 0.32)
   - Large: 0 16px 40px rgba(0, 0, 0, 0.4)
-- **Card Glow**: restrained crimson-tinted shadow
+- **Card Glow**: restrained gold-tinted shadow
 - **Pill Glow**: restrained obsidian shadow
 
 ### Animations

@@ -12,13 +12,13 @@
 ### Hover Effects
 - **Button Hover**: 
   - Primary buttons: `hover:-translate-y-1`, `hover:bg-brand-hover`
-  - Glass buttons: burgundy hover border with color transition
+  - Glass buttons: subtle gold hover border with color transition
 - **Custom Cursor**:
   - Uses the supplied transparent cursor artwork, scaled to 48px for fine pointers.
   - A light outlined version improves contrast over dark sections and clickable hover states.
   - Touch devices retain their native behavior; text fields keep the text-selection cursor.
 - **Card Hover**: 
-  - burgundy hover border, `hover:-translate-y-1.5`
+  - restrained gold hover border, `hover:-translate-y-1.5`
   - Smooth transition with `duration-300`
 - **Interactive Elements**: 
   - Subtle color changes with `transition-colors`
@@ -80,6 +80,7 @@
 - **Mobile/tablet drawer**: Opens with a short transition below 1024px; exposes expanded state, closes on outside click or Escape, and returns focus to the toggle on Escape.
 - **Offers dropdown**: Supports hover, click-to-lock and keyboard focus; Escape closes it and returns focus to the trigger. Closed links are removed from keyboard navigation.
 - **Intro overlay**: Dismisses at DOM ready instead of waiting through simulated loading steps.
+- **Design switch**: Switches between golden and crimson palettes, updates its accessible label, and saves the selection in local storage for other pages. On mobile, it is available in the navigation drawer.
 
 ## 5. Animation Details and Timing
 

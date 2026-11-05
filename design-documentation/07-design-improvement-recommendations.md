@@ -2,9 +2,9 @@
 
 ## 1. Current Color System
 
-### Obsidian, Chrome and Laser Crimson
-- **Palette**: Obsidian Black `#080808`, Chrome Silver `#CDCBCA`, Laser Crimson `#D41514`, Pure White `#F3F0F3`, Graphite `#171516`, Gunmetal `#352E30`, Deep Crimson `#810E11`, and Muted Grey `#8A7A7A`.
-- **Usage**: Keep obsidian dominant, use chrome and pure white for readable hierarchy, and reserve crimson for CTAs and selective highlights.
+### Midnight Black, Pure White and Golden Yellow
+- **Palette**: Midnight Black `#08090B`, Pure White `#F5F3EF`, Golden Yellow `#FFC900`, Graphite `#111317`, Dark Border `#292B30`, and Muted Text `#A5A5A5`.
+- **Usage**: Keep midnight black dominant, use white and muted text for readable hierarchy, and reserve gold for CTAs and selective highlights.
 - **Impact**: A premium, cinematic technology identity with a clear color hierarchy.
 
 ## 2. Typography System
@@ -55,9 +55,9 @@
 ### Shadow Effect Standardization
 - **Issue**: Different shadow effects used for similar components
 - **Recommendation**: Establish shadow usage guidelines:
-  - Small: 0 4px 14px rgba(37, 35, 33, 0.1)
-  - Standard: 0 8px 24px rgba(37, 35, 33, 0.14)
-  - Large: 0 16px 40px rgba(37, 35, 33, 0.18)
+  - Small: 0 4px 14px rgba(8, 9, 11, 0.1)
+  - Standard: 0 8px 24px rgba(8, 9, 11, 0.14)
+  - Large: 0 16px 40px rgba(8, 9, 11, 0.18)
 - **Impact**: Consistent visual depth across all components
 
 ## 5. Responsive Design Enhancements
@@ -95,7 +95,7 @@
 ## 7. Implementation Priority Recommendations
 
 ### High Priority (Critical Fixes)
-1. **Apply the Obsidian, Chrome and Laser Crimson palette** across UI elements (implemented)
+1. **Apply the Midnight Black, Pure White and Golden Yellow palette** across UI elements (implemented)
 2. **Standardize typography** across all pages (implemented)
 3. **Standardize spacing scale** using consistent Tailwind classes
 4. **Standardize card shadow effects** for consistent visual depth

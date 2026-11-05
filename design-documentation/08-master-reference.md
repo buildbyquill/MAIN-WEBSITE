@@ -21,14 +21,12 @@ Key principles:
 ### Primary Brand Elements
 - **Logo**: "Q" monogram with bookmark/quill icon
 - **Color Palette**:
-  - Obsidian Black: #080808 (primary canvas)
-  - Chrome Silver: #CDCBCA (secondary text and UI)
-  - Laser Crimson: #D41514 (primary accent)
-  - Pure White: #F3F0F3 (primary text)
-  - Graphite: #171516 (cards and secondary surfaces)
-  - Gunmetal: #352E30 (raised surfaces)
-  - Deep Crimson: #810E11 (accent depth)
-  - Muted Grey: #8A7A7A (quiet supporting text)
+  - Midnight Black: #08090B (primary canvas)
+  - Pure White: #F5F3EF (primary text)
+  - Golden Yellow: #FFC900 (primary accent)
+  - Graphite: #111317 (cards and secondary surfaces)
+  - Dark Border: #292B30 (raised surfaces)
+  - Muted Text: #A5A5A5 (quiet supporting text)
 - **Typography**: 
   - Display: Space Grotesk
   - Body: Manrope
@@ -39,14 +37,12 @@ Key principles:
 ### Color Tokens
 | Token | Value | Usage |
 |-------|-------|-------|
-| Obsidian Black | #080808 | Main background, hero and footer |
-| Chrome Silver | #CDCBCA | Secondary text, borders and UI |
-| Laser Crimson | #D41514 | Primary CTA and selective highlights |
-| Pure White | #F3F0F3 | Primary text |
-| Graphite | #171516 | Cards, forms and secondary surfaces |
-| Gunmetal | #352E30 | Raised surfaces |
-| Deep Crimson | #810E11 | Accent depth |
-| Muted Grey | #8A7A7A | Quiet supporting text |
+| Midnight Black | #08090B | Main background, hero and footer |
+| Pure White | #F5F3EF | Primary text |
+| Golden Yellow | #FFC900 | Primary CTA and selective highlights |
+| Graphite | #111317 | Cards, forms and secondary surfaces |
+| Dark Border | #292B30 | Raised surfaces |
+| Muted Text | #A5A5A5 | Quiet supporting text |
 
 ### Typography
 | Element | Font | Size | Weight |
@@ -84,7 +80,7 @@ Key principles:
 
 ### Modals
 - Centered with obsidian backdrop
-- Graphite content area with chrome border
+- Graphite content area with a subtle dark border
 - Close button in top-right
 - Form validation and success states
 
@@ -139,7 +135,7 @@ Key principles:
 ## 7. Quick Reference Summary
 
 ### Brand Identity
-- **Colors**: Obsidian #080808, Chrome #CDCBCA, Laser Crimson #D41514, Pure White #F3F0F3, Graphite #171516, Gunmetal #352E30, Deep Crimson #810E11, Muted Grey #8A7A7A
+- **Colors**: Midnight Black #08090B, Pure White #F5F3EF, Golden Yellow #FFC900, Graphite #111317, Dark Border #292B30, Muted Text #A5A5A5
 - **Fonts**: Space Grotesk (display), Manrope (body), JetBrains Mono (monospace)
 - **Spacing**: Consistent scale from p-4 to p-12
 

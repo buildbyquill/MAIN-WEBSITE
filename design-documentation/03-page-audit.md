@@ -306,7 +306,7 @@
 
 ### Identified Inconsistencies
 1. **Color Variations**: 
-   - Historical color variants are superseded by the Mocha & Burgundy foundation with selective scarlet: ivory canvas, charcoal structure, burgundy accent and soft-sand surfaces
+   - Historical color variants are superseded by the Midnight Black, Pure White and Golden Yellow system: midnight canvas, graphite structure, selective gold accents and clear white typography
 
 2. **Typography Inconsistency**:
    - Homepage uses "Bricolage Grotesque" for headings

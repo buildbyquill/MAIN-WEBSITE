@@ -122,7 +122,7 @@ The website uses a mobile-first responsive design system with the following brea
 
 ### Color Adaptation
 - **Dark Mode**: Consistent dark background (`bg-night`) across all breakpoints
-- **Accent Colors**: Keep burgundy as the primary accent, scarlet for rare details, and soft-sand supporting surfaces consistent across breakpoints
+- **Accent Colors**: Keep golden yellow as the primary accent, with midnight, graphite, white and muted text consistent across breakpoints
 - **Contrast**: Maintains sufficient contrast ratios at all viewport sizes
 
 ### Spacing System

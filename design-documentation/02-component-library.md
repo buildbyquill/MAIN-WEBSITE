@@ -25,15 +25,15 @@
 
 ### Primary Button
 - **Class**: `btn-primary-glow`
-- **Background**: Laser Crimson (`#D41514`) with Deep Crimson (`#810E11`) depth
-- **Text**: Pure White (`#F3F0F3`)
-- **Hover**: Subtle lift and restrained crimson shadow
+- **Background**: Golden Yellow (`#FFC900`)
+- **Text**: Midnight Black (`#08090B`)
+- **Hover**: Slight brightness increase and subtle lift
 - **Active**: Translates slightly up and down
 
 ### Glass Button
 - **Class**: `btn-glass-subtle`
-- **Background**: `rgba(243, 240, 243, 0.08)`
-- **Border**: 1px solid `rgba(205, 203, 202, 0.16)`
+- **Background**: `rgba(245, 243, 239, 0.08)`
+- **Border**: 1px solid `rgba(165, 165, 165, 0.16)`
 - **Backdrop Filter**: `blur(12px)`
 - **Hover**: Increases opacity and border color
 
@@ -45,7 +45,7 @@
 
 ### Standard Card
 - **Classes**: `bg-night-card`, `border`, `rounded-2xl`, `shadow-brutal`
-- **Background**: Graphite (`#171516`) with a subtle chrome border
+- **Background**: Graphite (`#111317`) with a subtle dark border
 - **Shadow**: Strong shadow with inset element
 - **Padding**: Generous padding for content
 
@@ -55,14 +55,14 @@
 - **Border**: Subtle white border
 
 ### Interactive Card
-- **Classes**: `group`, crimson hover border, `hover:-translate-y-1.5`
-- **Features**: Crimson hover outline with slight elevation
+- **Classes**: `group`, gold hover detail, `hover:-translate-y-1.5`
+- **Features**: Restrained gold hover outline with slight elevation
 
 ## Form Components
 
 ### Input Field
 - **Classes**: `rounded-xl`, `border-2`, `border-ink`, `focus:ring-2`, `focus:ring-brand`
-- **Surface**: Graphite (`#171516`) with a chrome border
+- **Surface**: Graphite (`#111317`) with a subtle dark border
 - **Focus**: 2px ring with brand color
 - **Padding**: Consistent spacing
 
@@ -81,8 +81,8 @@
 - **Description**: Centered graphite modal with an obsidian overlay
 - **Features**:
   - Dark backdrop with blur effect
-  - Graphite content area with a subtle chrome border
-  - Close button with a restrained crimson accent
+  - Graphite content area with a subtle dark border
+  - Close button with a restrained gold accent
   - Success message area
   - Form submission handling
 
@@ -105,8 +105,8 @@
 ## Footer Components
 
 ### Main Footer
-- **Background**: Obsidian (`#080808`)
-- **Text**: Chrome Silver (`#CDCBCA`)
+- **Background**: Obsidian (`#08090B`)
+- **Text**: Muted Text (`#A5A5A5`)
 - **Links**: Hover states with color transitions
 - **Layout**: Flexible with gap spacing
 
