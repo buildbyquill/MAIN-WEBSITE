@@ -1,5 +1,7 @@
 # Quill Labs Page-by-Page Audit
 
+> Historical pre-redesign audit. Page-specific palette and visual notes below describe the previous implementation; see `01-design-system.md` and `02-component-library.md` for current design tokens and components.
+
 ## 1. Homepage / Hero Section
 
 **Location**: Index.html (above the fold)

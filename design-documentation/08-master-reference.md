@@ -21,14 +21,17 @@ Key principles:
 ### Primary Brand Elements
 - **Logo**: "Q" monogram with bookmark/quill icon
 - **Color Palette**:
-  - Warm Ivory: #F2EBDD (primary canvas)
-  - Charcoal: #252321 (typography and dark sections)
-  - Deep Burgundy: #722F37 (primary brand accent)
-  - Scarlet Red: #E9241A (secondary highlight)
-  - Soft Sand: #D8C9AE (supporting neutral surface)
+  - Obsidian Black: #080808 (primary canvas)
+  - Chrome Silver: #CDCBCA (secondary text and UI)
+  - Laser Crimson: #D41514 (primary accent)
+  - Pure White: #F3F0F3 (primary text)
+  - Graphite: #171516 (cards and secondary surfaces)
+  - Gunmetal: #352E30 (raised surfaces)
+  - Deep Crimson: #810E11 (accent depth)
+  - Muted Grey: #8A7A7A (quiet supporting text)
 - **Typography**: 
-  - Display: Bricolage Grotesque
-  - Body: DM Sans
+  - Display: Space Grotesk
+  - Body: Manrope
   - Monospace: JetBrains Mono
 
 ## 3. Design System Summary
@@ -36,21 +39,22 @@ Key principles:
 ### Color Tokens
 | Token | Value | Usage |
 |-------|-------|-------|
-| Warm Ivory | #F2EBDD | Main background and light sections |
-| Charcoal | #252321 | Typography, dark sections and footer |
-| Deep Burgundy | #722F37 | Buttons, links and active states |
-| Scarlet Red | #E9241A | Selective highlights |
-| Soft Sand | #D8C9AE | Supporting and alternating surfaces |
-| Burgundy Tint | #ECE0D4 | Soft accent surfaces |
-| Dark Card | #302D29 | Cards on charcoal sections |
+| Obsidian Black | #080808 | Main background, hero and footer |
+| Chrome Silver | #CDCBCA | Secondary text, borders and UI |
+| Laser Crimson | #D41514 | Primary CTA and selective highlights |
+| Pure White | #F3F0F3 | Primary text |
+| Graphite | #171516 | Cards, forms and secondary surfaces |
+| Gunmetal | #352E30 | Raised surfaces |
+| Deep Crimson | #810E11 | Accent depth |
+| Muted Grey | #8A7A7A | Quiet supporting text |
 
 ### Typography
 | Element | Font | Size | Weight |
 |---------|------|-------|--------|
-| H1 | Bricolage Grotesque | 4.5rem (72px) | 800 |
-| H2 | Bricolage Grotesque | 3rem (48px) | 700 |
-| H3 | Bricolage Grotesque | 2.25rem (36px) | 700 |
-| Body | DM Sans | 1.125rem (18px) | 400 |
+| H1 | Space Grotesk | 4.5rem (72px) | 800 |
+| H2 | Space Grotesk | 3rem (48px) | 700 |
+| H3 | Space Grotesk | 2.25rem (36px) | 700 |
+| Body | Manrope | 1.125rem (18px) | 400 |
 | Monospace | JetBrains Mono | 1rem (16px) | 500 |
 
 ### Spacing Scale
@@ -79,8 +83,8 @@ Key principles:
 - Proper spacing between form elements
 
 ### Modals
-- Centered with dark backdrop
-- White content area with border
+- Centered with obsidian backdrop
+- Graphite content area with chrome border
 - Close button in top-right
 - Form validation and success states
 
@@ -135,8 +139,8 @@ Key principles:
 ## 7. Quick Reference Summary
 
 ### Brand Identity
-- **Colors**: Warm Ivory #F2EBDD, Charcoal #252321, Deep Burgundy #722F37, Scarlet Red #E9241A, Soft Sand #D8C9AE
-- **Fonts**: Bricolage Grotesque (display), DM Sans (body), JetBrains Mono (monospace)
+- **Colors**: Obsidian #080808, Chrome #CDCBCA, Laser Crimson #D41514, Pure White #F3F0F3, Graphite #171516, Gunmetal #352E30, Deep Crimson #810E11, Muted Grey #8A7A7A
+- **Fonts**: Space Grotesk (display), Manrope (body), JetBrains Mono (monospace)
 - **Spacing**: Consistent scale from p-4 to p-12
 
 ### Key Implementation

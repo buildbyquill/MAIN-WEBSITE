@@ -5,48 +5,50 @@
 ### Core Brand Colors
 | Color Name | HEX | Usage |
 |------------|-----|-------|
-| Warm Ivory | `#F2EBDD` | Main page and light-section backgrounds |
-| Charcoal Black | `#252321` | Primary text, dark sections and footer |
-| Deep Burgundy | `#722F37` | Primary brand accent, buttons, links and active states |
-| Scarlet Red | `#E9241A` | Secondary highlights and graphic details |
-| Soft Sand | `#D8C9AE` | Supporting surfaces and secondary neutral details |
+| Obsidian Black | `#080808` | Main canvas, hero, navigation and footer |
+| Chrome Silver | `#CDCBCA` | Secondary text, borders and supporting UI |
+| Laser Crimson | `#D41514` | Primary CTA and selective highlights |
+| Pure White | `#F3F0F3` | Primary text and high-contrast UI |
+| Graphite | `#171516` | Cards, forms and secondary surfaces |
+| Gunmetal | `#352E30` | Raised surfaces and subtle contrast |
+| Deep Crimson | `#810E11` | Crimson depth and restrained button gradients |
+| Muted Grey | `#8A7A7A` | Quiet supporting labels |
 
 ### Background and Surface Colors
 | Color Name | HEX | Usage |
 |------------|-----|-------|
-| Ivory Surface | `#F2EBDD` | Page canvas, hero and light sections |
-| Soft Sand | `#D8C9AE` | Alternating light sections and supporting surfaces |
-| Charcoal Surface | `#302D29` | Cards and surfaces in dark sections |
-| Elevated Charcoal | `#3A3632` | Raised dark surfaces |
-| Burgundy Tint | `#ECE0D4` | Soft accent surface |
+| Obsidian Surface | `#080808` | Page canvas, hero and footer |
+| Graphite Surface | `#171516` | Cards, forms and alternating sections |
+| Gunmetal Surface | `#352E30` | Raised cards and supporting surfaces |
+| Crimson Tint | `rgba(212, 21, 20, 0.12)` | Restrained accent surface |
 
 ### Text Colors
 | Color Name | HEX | RGB | Usage | Purpose | Category |
 |------------|-----|-----|-------|---------|----------|
-| Text (Ivory) | `#F2EBDD` | 242, 235, 221 | Primary text on charcoal backgrounds | Text | `#F2EBDD` |
-| Text (Soft) | `#5B5860` | 91, 88, 96 | Secondary text on light backgrounds | Text | `#5B5860` |
-| Text (Muted) | `#77737B` | 119, 115, 123 | Captions on light backgrounds | Text | `#77737B` |
+| Text (Pure White) | `#F3F0F3` | 243, 240, 243 | Primary text on dark surfaces | Text | `#F3F0F3` |
+| Text (Chrome) | `#CDCBCA` | 205, 203, 202 | Supporting copy and UI labels | Text | `#CDCBCA` |
+| Text (Muted Grey) | `#8A7A7A` | 138, 122, 122 | Quiet captions and metadata | Text | `#8A7A7A` |
 
 ### Borders and Dividers
 | Color Name | HEX | RGB | Usage | Purpose | Category |
 |------------|-----|-----|-------|---------|----------|
-| Border Subtle | `rgba(37, 35, 33, 0.12)` | Charcoal | Borders on ivory surfaces | Border | `rgba(37, 35, 33, 0.12)` |
-| Border Hover | `rgba(114, 47, 55, 0.65)` | Burgundy | Interactive hover states | Border | `rgba(114, 47, 55, 0.65)` |
+| Border Subtle | `rgba(205, 203, 202, 0.16)` | Chrome Silver | Dark-surface separators | Border | `rgba(205, 203, 202, 0.16)` |
+| Border Hover | `rgba(212, 21, 20, 0.56)` | Laser Crimson | Interactive hover states | Border | `rgba(212, 21, 20, 0.56)` |
 
 ### Gradients and Patterns
 | Name | Description | Colors | Usage |
 |------|-------------|--------|-------|
-| Dot Grid Pattern | Subtle radial dot grid | Burgundy tint | Background texture on selected sections |
-| Glow Bloom | Restrained radial tint | Burgundy tint | Decorative emphasis |
-| Charcoal Bloom | Restrained radial tint | Soft-sand tint over charcoal | Dark-section atmosphere |
+| Dot Grid Pattern | Subtle radial dot grid | Low-opacity chrome or crimson | Background texture on selected sections |
+| Glow Bloom | Restrained radial tint | Laser Crimson | Decorative emphasis |
+| Graphite Bloom | Restrained radial tint | Gunmetal over obsidian | Dark-section atmosphere |
 
 ## Typography
 
 ### Font Families
 | Family | Usage | Weight Range |
 |--------|-------|-------------|
-| Bricolage Grotesque | Headings (H1-H3), titles, hero text | 400-800 |
-| DM Sans | Body text, paragraphs, descriptions | 400-800 |
+| Space Grotesk | Headings (H1-H3), titles, hero text | 400-700 |
+| Manrope | Body text, paragraphs, descriptions | 400-800 |
 | JetBrains Mono | Code blocks, technical content, technical labels | 400-800 |
 
 ### Font Sizes
@@ -99,20 +101,20 @@
 ## Visual Effects
 
 ### Background Patterns
-- **Dot Grid**: subtle scarlet radial dots with 24px repeat
-- **Dark Grid**: subtle soft-sand radial dots with 24px repeat
+- **Dot Grid**: subtle crimson radial dots with 28px repeat
+- **Dark Grid**: subtle chrome radial dots with 28px repeat
 
 ### Glow Effects
-- **Basic Glow**: restrained burgundy radial tint
-- **Dark Glow**: restrained soft-sand radial tint over charcoal
+- **Basic Glow**: restrained laser-crimson radial tint
+- **Dark Glow**: restrained gunmetal radial tint over obsidian
 
 ### Shadows
 - **Brutal Shadows**: 
-  - Small: 0 4px 14px rgba(37, 35, 33, 0.1)
-  - Standard: 0 8px 24px rgba(37, 35, 33, 0.14)
-  - Large: 0 16px 40px rgba(37, 35, 33, 0.18)
-- **Card Glow**: restrained burgundy-tinted shadow
-- **Pill Glow**: restrained burgundy-tinted shadow
+  - Small: 0 4px 14px rgba(0, 0, 0, 0.28)
+  - Standard: 0 8px 24px rgba(0, 0, 0, 0.32)
+  - Large: 0 16px 40px rgba(0, 0, 0, 0.4)
+- **Card Glow**: restrained crimson-tinted shadow
+- **Pill Glow**: restrained obsidian shadow
 
 ### Animations
 - **Card Enter**: scale(0.96) translateY(24px) -> scale(1) translateY(0) with 0.65s duration

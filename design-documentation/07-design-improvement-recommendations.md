@@ -1,23 +1,23 @@
 # Quill Labs Design Improvement Recommendations
 
-## 1. Color Consistency Issues
+## 1. Current Color System
 
-### Mocha & Burgundy Foundation with Scarlet Highlights
-- **Approved palette**: Warm Ivory `#F2EBDD`, Charcoal `#252321`, Deep Burgundy `#722F37`, Scarlet Red `#E9241A`.
-- **Usage**: Ivory is the main canvas; charcoal structures dark sections and typography; burgundy is the signature brand accent; scarlet is reserved for occasional highlights.
-- **Impact**: A warm, premium editorial identity with a clear color hierarchy.
+### Obsidian, Chrome and Laser Crimson
+- **Palette**: Obsidian Black `#080808`, Chrome Silver `#CDCBCA`, Laser Crimson `#D41514`, Pure White `#F3F0F3`, Graphite `#171516`, Gunmetal `#352E30`, Deep Crimson `#810E11`, and Muted Grey `#8A7A7A`.
+- **Usage**: Keep obsidian dominant, use chrome and pure white for readable hierarchy, and reserve crimson for CTAs and selective highlights.
+- **Impact**: A premium, cinematic technology identity with a clear color hierarchy.
 
-## 2. Typography Inconsistency Resolution
+## 2. Typography System
 
 ### Font Family Standardization
-- **Recommendation**: Use Bricolage Grotesque for editorial display headings, DM Sans for readable body text, and JetBrains Mono for technical labels throughout all pages.
+- **System**: Space Grotesk for display headings, Manrope for body text, and JetBrains Mono for technical labels throughout all pages.
 - **Impact**: A distinctive display voice with a consistent, legible interface.
 
 ### Font Weight Consistency
 - **Issue**: Inconsistent use of font weights within the same font family
 - **Recommendation**: Establish clear weight usage guidelines:
-  - Bricolage Grotesque: 400 (regular), 500 (medium), 600 (semi-bold), 700+ (bold)
-  - DM Sans: 400 (regular), 500 (medium), 600+ (semi-bold)
+  - Space Grotesk: 400 (regular), 500 (medium), 600 (semi-bold), 700 (bold)
+  - Manrope: 400 (regular), 500 (medium), 600 (semi-bold), 700-800 (bold)
 - **Impact**: Better visual hierarchy and consistent typography application
 
 ## 3. Spacing and Layout Consistency
@@ -95,8 +95,8 @@
 ## 7. Implementation Priority Recommendations
 
 ### High Priority (Critical Fixes)
-1. **Standardize the Mocha & Burgundy palette with selective scarlet** across UI elements
-2. **Standardize typography** across all pages
+1. **Apply the Obsidian, Chrome and Laser Crimson palette** across UI elements (implemented)
+2. **Standardize typography** across all pages (implemented)
 3. **Standardize spacing scale** using consistent Tailwind classes
 4. **Standardize card shadow effects** for consistent visual depth
 

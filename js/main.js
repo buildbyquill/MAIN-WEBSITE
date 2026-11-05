@@ -1,6 +1,6 @@
 /* =============================================================================
    QUILL LABS STUDIO — UNIFIED RUNTIME SCRIPT
-   Provides: Boot Preloader + Click Word Pop + Staggered Card Physics + Modals
+   Provides: Boot Preloader + Staggered Card Reveals + Modals
    ============================================================================= */
 
 // --- 1. ACE Academy Signature Boot Preloader Screen ---
@@ -152,48 +152,7 @@ function initHeroPhraseRotation() {
   scheduleRotation();
 }
 
-// --- 3. AI Jugaad Click Word Pop Particle Burst ---
-(function() {
-  const popWords = [
-    "SYSTEM!", "14 DAYS!", "SHIPPED!", "QUILL!", "FAST!",
-    "CLEAN CODE!", "BUILT!", "AUTOPILOT!", "SCALE!", "ZERO BLOAT!"
-  ];
-
-  document.addEventListener("pointerdown", (e) => {
-    // Exclude form controls, canvas, preloader, modal backdrop clicks
-    if (e.target.closest("button, a, input, select, textarea, canvas, #preloader, #project-modal > div")) return;
-
-    let layer = document.getElementById("burst-layer");
-    if (!layer) {
-      layer = document.createElement("div");
-      layer.id = "burst-layer";
-      layer.className = "pointer-events-none fixed inset-0 z-[99999] overflow-hidden";
-      document.body.appendChild(layer);
-    }
-
-    const chip = document.createElement("div");
-    chip.className = "jw-burst-chip";
-    chip.textContent = popWords[Math.floor(Math.random() * popWords.length)];
-
-    const rot = (Math.random() * 24 - 12) + "deg";
-    const dx = (Math.random() * 80 - 40) + "px";
-    const dy = -(Math.random() * 60 + 30) + "px";
-
-    chip.style.left = e.clientX + "px";
-    chip.style.top = e.clientY + "px";
-    chip.style.setProperty("--rot", rot);
-    chip.style.setProperty("--dx", dx);
-    chip.style.setProperty("--dy", dy);
-
-    layer.appendChild(chip);
-
-    setTimeout(() => {
-      chip.remove();
-    }, 1100);
-  });
-})();
-
-// --- 4. Mobile Navigation ---
+// --- 3. Mobile Navigation ---
 let mobileNavCloseTimeout;
 
 function toggleMobileNav() {

@@ -9,7 +9,7 @@
 - **CSS Framework**: Tailwind CSS 3.4.17, compiled locally with `npm run build`
 
 ### Additional Libraries and Tools
-- **Fonts**: Google Fonts (Bricolage Grotesque, DM Sans, JetBrains Mono)
+- **Fonts**: Google Fonts (Space Grotesk, Manrope, JetBrains Mono)
 - **Icons**: Custom SVG icons with class-based styling
 - **Frameworks**: No heavy frameworks - lightweight approach
 
